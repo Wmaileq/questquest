@@ -1,0 +1,126 @@
+.whatis
+	padding-bottom: 5rem
+	h2
+		font-size: 4rem
+		font-weight: 700
+		margin-top: 10.9rem
+		margin-left: 8.1rem
+	p
+		font-size: 1.7rem
+		font-weight: 300
+		margin-left: 11.2rem
+		margin-top: 2.2rem
+		line-height: 2.7rem
+		strong
+			font-weight: normal
+	video
+		width: 57rem
+		height: 32rem
+		margin-top: 11.9rem
+		border-radius: 1rem
+		position: relative
+.whatisbg
+	position: relative
+	&-cloud
+		position: absolute
+		top: 65rem
+		left: 24rem
+		img
+			height: 2.9rem
+			width: 7rem
+	&-cloud2
+		position: absolute
+		top: 10em
+		right: 5rem
+		img
+			height: 2.9rem
+			width: 7rem
+	&-trci
+		position: absolute
+		top: 5rem
+		left: 2rem
+		img
+			width: 6.5rem
+	&-arrow
+		position: absolute
+		bottom: 5rem
+		right: 8rem
+		img
+			width: 6.5rem
+	&-crestik
+		position: absolute
+		top: 15rem
+		left: 51rem
+		img
+			width: 2.5rem
+			height: 2.5rem
+			transform: rotate(-60deg)
+.video-vid
+	position: absolute
+	top: 0
+	content: ' '
+	width: 56.7rem
+	height: 31.8rem
+	border-radius: 1.1rem
+	margin-left: 1rem
+	margin-top: 12.9rem
+	display: none
+.video-preview
+	position: relative
+	content: ' '
+	width: 56.7rem
+	height: 31.8rem
+	border-radius: 1.1rem
+	margin-left: 0rem
+	margin-top: 11.7rem
+	img
+		width: 56.7rem
+		height: 31.8rem
+.video-bd
+	position: absolute
+	border: 2px solid rgba(255,255,255,0.5)
+	width: 55rem
+	height: 30rem
+	top: 0.9rem
+	left: 0.85rem
+	border-radius: 1.1rem
+.video-overlay
+	position: absolute
+	background-color: rgba(0,0,0,0.5)
+	border-radius: 1.1rem
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+.video-play
+	position: absolute
+	top: 50%
+	left: 50%
+	content: ' '
+	width: 14.2rem
+	height: 14.2rem
+	background: url(../img/play.svg) center center no-repeat
+	background-size: cover
+	transition: 0.5s
+	transform: translate(-50%, -50%)
+	&:hover
+		cursor: pointer
+		transform: translate(-50%, -50%) rotate(120deg)
+@media (max-width: 767px)
+	.whatis
+		position: relative
+		h2
+			margin: 0
+			font-size: 2.6rem
+			font-weight: 700
+			margin-top: 5rem
+		p
+			margin-left: 0
+	.mobile
+		&-circles-2
+			top: 3rem
+			right: 2rem
+			position: absolute
+			img
+				height: 4rem
+				width: 4rem

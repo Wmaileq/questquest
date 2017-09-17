@@ -1,0 +1,121 @@
+footer
+	position: relative
+	background-color: #ebebeb
+	margin-top: -2rem
+	z-index: 0
+	height: 25.7rem
+.footer
+	padding-top: 5rem
+	padding-left: 10rem
+	padding-right: 10rem
+	.social-links
+		line-height: inherit
+		height: inherit
+		width: 100%
+		text-align: right
+		padding-left: 8rem
+		margin-bottom: 2rem
+		ul
+			margin-left: 0
+			width: 100%
+			text-align: right
+			a
+				border-bottom: 0
+				text-decoration: none
+			li
+				margin-right: 0
+				vertical-align: middle
+				line-height: 4.9rem
+			li:last-of-type
+				width: 11.5rem
+				img
+					width: 11.5rem
+					height: auto
+	h5
+		font-size: 1.5rem
+		color: #444
+		font-weight: 700
+	ul
+		display: inline-block
+		list-style-type: none
+		font-weight: 300
+		margin-top: 2rem
+		a
+			color: #444
+		li
+			margin-top: 0.5rem
+			font-size: 1.5rem
+	&-ul-left
+		margin-right: 5.8rem
+	&-ul-right
+		text-align: right
+		font-size: 1.6rem
+		ul
+			margin-top: 0
+			text-align: right
+			width: 100%
+			a
+				color: #888
+				border-bottom: 1px dashed #888
+				text-decoration: none
+				transition: all 0.1s
+				&:hover
+					border-bottom: 1px dashed transparent
+@media (max-width: 767px)
+	footer
+		height: auto
+	.footer
+		padding: 0 1.5rem
+		&-left
+			width: 100%
+			margin-top: 1rem
+		&-bottom
+			margin-top: 4rem
+		.social-links
+			padding-left: 0
+			ul
+				padding-left: 0
+				width: 29rem
+				margin: 0 auto
+		&-menu
+			text-align: center
+			ul
+				text-align: center
+				a
+					font-size: 2rem
+					font-weight: 400
+					color: #333
+					border-bottom: 0
+		&-ul-right
+			text-align: center
+			span
+				display: block
+				margin-top: 7rem
+				margin-bottom: 3rem
+		&-call
+			position: fixed
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 10.8rem
+			background-color: rgba(0,0,0,0.75)
+			padding-top: 2.5rem
+			img
+				display: inline-block
+				width: 5rem
+			&-cent
+				margin: 0 auto
+				width: 22rem
+				display: block
+			&-text
+				display: inline-block
+				color: #FFF
+				font-weight: 700
+				font-size: 2.7rem
+				vertical-align: middle
+	.social-links img, .social-links ul li
+		width: 4.5rem!important
+		height: 4.5rem!important
+	.social-links
+		width: 100%
+	
