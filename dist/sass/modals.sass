@@ -1,33 +1,10 @@
 #modal-subscribe, #modal-phone
 	h4
 		color: #333
-		font-size: 2.3rem
+		font-size: 2.2rem
 		font-weight: 700
 		text-align: center
-		margin-top: 4rem
-	.modal-text
-		font-size: 1.7rem
-		margin: 1rem 10rem
-		text-align: center
-		display: block
-	.modal-button-vk, .modal-button-phone
-		display: block
-		margin: 0 auto
-		width: 22.5rem
-		height: 5rem
-		border-radius: 0.5rem
-		line-height: 5rem
-		font-size: 1.7rem
-		color: #FFF
-		background-color: #ff3f3f
-		text-align: center
-		text-decoration: none
-		transition: 0.2s all
-		margin-bottom: 2rem
-		&:hover
-			background-color: #ff624d
-		&:focus
-			background-color: #ff3f3f
+		margin-top: 3.6rem
 	.close
 		border: 0
 		background-color: transparent
@@ -35,7 +12,46 @@
 		position: absolute
 		top: 0rem
 		right: 2rem
+		outline: none
+.modal-button-vk, .modal-button-phone
+	display: block
+	margin: 0 auto
+	width: 22.5rem
+	height: 5rem
+	border-radius: 0.5rem
+	line-height: 5rem
+	font-size: 1.7rem
+	color: #FFF
+	background-color: #ff3f3f
+	text-align: center
+	text-decoration: none
+	transition: 0.2s all
+	margin-bottom: 2rem
+	position: relative
+	z-index: 200
+	&:hover, &:focus
+		color: #FFF
+		text-decoration: none
+	&:hover
+		background-color: #ff624d
+	&:focus
+		background-color: #ff3f3f
+.modal-button-vk
+	margin-bottom: 4rem
 #modal-phone
+	.modal-dialog
+		width: 54.5rem
+	h4
+		margin-left: 11rem
+		width: 32.5rem
+		margin-bottom: 4rem
+	.modal-text
+		width: 38.5rem
+		margin-left: 9rem
+		text-align: center
+		font-size: 1.6rem
+		color: #333
+		margin-bottom: 2rem
 	.modal-button-phone:disabled
 		cursor: not-allowed
 	.modal-button-phone
@@ -43,19 +59,23 @@
 		outline: none
 		border: 0
 	.modal-phone-personal-div
-		width: 29rem
-		margin: 0 auto
-		margin-bottom: 3rem
+		width: 28.5rem
+		margin-left: 14.2rem
+		margin-bottom: 4rem
 		font-weight: 300
+		font-size: 1.4rem
 		label
 			a
 				color: #333
+				border-bottom: 1px dashed #333
+				&:hover
+					text-decoration: none
 	#modal-phone-personal
 		font-size: 1.5rem
 		outline: none
 	.modal-phone-tel
 		margin: 0 auto
-		margin-bottom: 3rem
+		margin-bottom: 1.7rem
 		width: 26rem
 #phone-modal
 	margin: 0 auto
@@ -64,3 +84,31 @@
 	border-radius: 0.5rem
 	border: 1px solid #959595
 	outline: none
+	width: 26rem
+#modal-subscribe
+	.modal-dialog
+		width: 48.5rem
+		&:after
+			content: ''
+			width: 3.5rem
+			height: 2.5rem
+			background: url(../img/bgi/circle-triangle.svg) center center no-repeat
+			background-size: cover
+			bottom: 5.5rem
+			right: 10rem
+			position: absolute
+			z-index: 100
+	.modal-text
+		font-size: 1.6rem
+		color: #333
+		text-align: center
+		&:nth-of-type(1)
+			width: 31rem
+			margin-left: 9rem
+		&:nth-of-type(2)
+			width: 38rem
+			margin-left: 5rem
+			margin-bottom: 4rem
+	h4
+		width: 39rem
+		margin-left: 5rem
