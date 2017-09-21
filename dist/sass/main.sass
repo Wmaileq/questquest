@@ -5,7 +5,7 @@
 html
 	font-size: 10px
 body
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto Slab', serif
 	color: #333333
 header
 	font-size: 1.7rem
@@ -74,9 +74,10 @@ h1
 	position: relative
 	color: #FFF
 	overflow: hidden
-	margin-top: -11.6rem
+	transform: translateY(-11.6rem)
 	padding-top: 11.6rem
 	z-index: 100
+	margin-bottom: -11.6rem
 	&-header
 		position: relative
 		height: 11.6rem
@@ -206,7 +207,7 @@ input[type='number']
 	-moz-appearance:textfield
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button 
-	-webkit-appearance: none;
+	-webkit-appearance: none
 @media (min-width: 1366px)
 	.mobile_show
 		display: none!important
@@ -327,6 +328,8 @@ input::-webkit-inner-spin-button
 		background-size: 100%
 		padding-top: 0
 		z-index: 0
+		transform: none
+		margin-bottom: 0
 		&-header
 			margin-top: 0
 		h3
