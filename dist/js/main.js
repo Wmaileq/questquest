@@ -68,7 +68,6 @@ $(document).ready(function(){
       });
     });
 /* Плавающая менюшка */
-$(document).ready(function(){
     $(window).scroll(function(){
        if (($(window).scrollTop() - 28) >= $(".navigation").position().top ) {
         $("header").css('transform', 'translateY(-5rem)');
@@ -83,8 +82,6 @@ $(document).ready(function(){
             $(".navigation").css('margin-top', '0rem');
         }
     })
-    
-});
 /* Формы */
 $(document).ready(function(){
     $("#form-subscribe").validate({
@@ -158,4 +155,17 @@ $(document).ready(function(){
       top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 800);
   });
+});
+// Обрезка текста
+$(document).ready(function(){
+var size = 155;
+var newsText = '';
+    newsContent = $('.feed-otziv p');
+    newsContent.each(function(i,elem) {
+    newsText = $(this).text();
+    
+if(newsText.length > size){
+  $(this).text(newsText.slice(0, size) + ' ...');
+}
+});
 });
