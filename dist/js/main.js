@@ -156,16 +156,3 @@ $(document).ready(function(){
     $('body,html').animate({scrollTop: top}, 800);
   });
 });
-// Обрезка текста
-$(document).ready(function(){
-var size = 155;
-var newsText = '';
-    newsContent = $('.feed-otziv p');
-    newsContent.each(function(i,elem) {
-    newsText = $(this).text();
-    
-if(newsText.length > size){
-  $(this).text(newsText.slice(0, size) + ' ...');
-}
-});
-});

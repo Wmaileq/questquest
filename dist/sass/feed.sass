@@ -1,5 +1,7 @@
 .feed
 	position: relative
+	&-height
+		height: 50rem
 	p
 		font-size: 1.8rem
 		line-height: 2.6rem
@@ -10,14 +12,33 @@
 		font-weight: 700
 		color: #333
 		text-align: center
+	&-truncate
+		position: absolute
+		background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.9))
+		bottom: 0
+		left: 0
+		height: 5rem
+		width: 100%
 	&-otziv
-		height: 44rem
+		min-height: 44rem
+		max-height: 44rem
 		margin-top: 7.7rem
 		box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1)
 		padding: 4.1rem 3.4rem
 		border: 1px solid #ebebeb
 		border-radius: 0.8rem
 		overflow: hidden
+		right: 1.5rem
+		left: 1.5rem
+		transition: max-height 0.4s
+		position: absolute
+		z-index: 200
+		background-color: #FFF
+		&:hover
+			max-height: 90rem
+			.feed-truncate
+				display: none
+			
 	h3
 		font-size: 2.7rem
 		font-weight: 400
@@ -97,6 +118,8 @@
 			margin-top: 4rem
 			height: 29rem
 			padding: 2rem
+			position: relative
+			min-height: 0
 		&-number
 			font-size: 1.2rem
 			font-weight: 300
