@@ -37,8 +37,17 @@
 		position: relative
 		width: 87.375rem
 		height: 49rem
+		overflow: hidden
+		border-top-left-radius: 1rem
+		border-top-right-radius: 1rem
+		z-index: 200
 		img
-			width: 100%
+			width: auto
+			min-width: 100%
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
 			height: 100%
 	&-bd
 		width: 85.5rem
@@ -55,7 +64,8 @@
 		position: absolute
 		top: 0
 		left: 0
-		border-radius: 1rem
+		border-top-left-radius: 1rem
+		border-top-right-radius: 1rem
 		cursor: pointer
 		transition: 0.2s background-color
 		&:hover
@@ -66,6 +76,7 @@
 			display: block
 			height: 20.5rem
 			background-color: rgba(0,0,0,0.3)
+			z-index: 300
 	&-play
 		background: url(../img/play.svg) center center no-repeat
 		background-size: cover
@@ -116,6 +127,17 @@
 			a
 				color: #333
 				text-decoration: none
+		&-img
+			height: 20.5rem
+			border-top-left-radius: 1rem
+			border-top-right-radius: 1rem
+			position: relative
+			z-index: 200
+			img
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
 
 	&-prev
 		height: 20.5rem
@@ -207,6 +229,9 @@
 			height: auto
 			box-shadow: none
 			margin-top: 2rem
+			border-radius: 0
+			background-color: #f6f6f6
+			padding-bottom: 2rem
 			h4
 				font-size: 1.8rem
 				margin-left: 0
@@ -236,13 +261,23 @@
 					height: 0.9rem
 					background: url(../img/mobile/more.svg) center center no-repeat
 					background-size: cover
+		&-overlay
+			border-radius: 0
+			&_mini
+				height: 100%
+				width: 100%
+				left: 0
+				top: 0
+
 		&-main
 			width: 100%
 			height: auto
 		&-preview
 			width: 100%
-			height: auto
-
+			height: 20.5rem
+			border-radius: 0rem
+			img
+				border-radius: 0rem
 		&-bd
 			display: none
 		&-play
@@ -261,15 +296,10 @@
 			margin-left: 0
 			margin-right: 0
 			padding-left: 1.5rem
+			padding-right: 1.5rem
 			h4
 				font-weight: 700
 				font-size: 1.7rem
-			img
-				display: inline-block
-				width: 40%
-				border-radius: 0.5rem
-				vertical-align: top
-				min-height: 8.5rem
 			p
 				display: inline-block
 				width: 55%
@@ -279,13 +309,27 @@
 				font-weight: 300
 				max-height: 8.8rem
 				padding-left: 1.5rem
+			&-img
+				display: inline-block
+				width: 40%
+				border-radius: 0.5rem
+				vertical-align: top
+				min-height: 8.5rem
+				overflow: hidden
+				height: auto
+				img
+					position: static
+					left: auto
+					width: 100%
+					height: auto
+					transform: none
+					min-height: 8.5rem
+					min-width:
 		&-prev
 			height: auto
-		&-overlay_mini
-			display: none
 		&-play_mini
 			top: 45%
-			left: 20%
+			left: 50%
 			width: 4.2rem
 			height: 4.2rem
 	.mobile-videoq-header
