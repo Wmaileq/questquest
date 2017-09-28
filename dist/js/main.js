@@ -156,3 +156,16 @@ $(document).ready(function(){
     $('body,html').animate({scrollTop: top}, 800);
   });
 });
+/* Авто высота */
+$(document).ready(function(){
+$('#region').on('show.bs.modal', function (e) {
+  var DeviceWidth = $(window).width();
+  if ($(window).width() > 1099) {
+  $('#region-cities').height(4 * Math.ceil($('#region-cities').children().length / 6) + 'rem');
+} else if ($(window).width() > 479) {
+  $('#region-cities').height(4 * Math.ceil($('#region-cities').children().length / 2) + 'rem');
+} else {
+  $('#region-cities').height('auto');
+}
+});
+});

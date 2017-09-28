@@ -150,14 +150,17 @@
           </div>
         </div>
         <div class="row mobile_hide">
-          <div class="col-sm-12 banner">
+          <div class="col-sm-12 banner mobile_hide">
             <img src="img/cinema.jpg" alt="">
           </div>
         </div>
         <h1 class="mobile_hide">Настоящие квесты в реальности</h1>
         <h3>Стань героем <span class="mobile_hide">собственного</span><span class="mobile_show">своего</span> приключения.<span class="mobile_hide"> Полные карманы эмоций и впечатлений на весь день!</span.></h3>
       </div>
-      <div class="way mobile_hide">
+      <div class="mobile-way mobile_show"></div>
+      <a href="#" class="mobile-main-button mobile_show">Смотреть расписание</a>
+      <div class="way">
+        <div class="way-way"></div>
         <div class="way-all way-1">
           <span>7</span><br>стран
         </div>
@@ -171,8 +174,6 @@
           <span>114044</span><br>игрока
         </div>
       </div>
-      <div class="mobile-way mobile_show"></div>
-      <a href="#" class="mobile-main-button mobile_show">Смотреть расписание</a>
       <div class="mobile-Xyel-1 mobile_show">
         <img src="img/mobile/Xyellow.svg" alt="">
       </div>
@@ -191,23 +192,6 @@
       <div class="mobile-tri-1 mobile_show">
         <img src="img/mobile/triangle.svg" alt="">
       </div>
-    </section>
-    
-    <section class="way mobile_show">
-        <div class="way-way">
-          <div class="way-all way-1">
-            <span>7</span><br>стран
-          </div>
-          <div class="way-all way-2">
-            <span>45</span><br>городов
-          </div>
-          <div class="way-all way-3">
-            <span>205</span><br>квестов
-          </div>
-          <div class="way-all way-4">
-            <span>114044</span><br>игрока
-          </div>
-        </div>
     </section>
 
     <section class="navigation mobile_hide">
@@ -333,10 +317,10 @@
                 </div>
               </div>
               <div class="cat_s-left_b">
-                <i class="icon-left"></i>
+                <div class="cat_s-left_b-arrow"></div>
               </div>
               <div class="cat_s-right_b">
-                <i class="icon-right"></i>
+                <div class="cat_s-right_b-arrow"></div>
               </div>
             </div>
           </div>
@@ -1312,6 +1296,10 @@
       </div>
     </section>
     
+    <section class="city-prev mobile_hide">
+      <h3>Возможно, вас заинтересуют квесты в <a href="#">Городе X</a></h3>
+    </section>
+
     <section class="cities mobile_hide">
       <div class="container cities-block">
         <h2>Города-спутники </h2>
@@ -1355,7 +1343,7 @@
       <div class="container">
         <div class="row whatisbg">
           <div class="col-xs-12 col-sm-6">
-            <h2>Что такое квест?</h2>
+            <h2><a href="#">Что такое квест?</a></h2>
             <p><strong>Квест в реальности</strong> — это ваше собственное приключение, где вы становитесь героем (как в кино, любимой книге или игре). <br><br> Вы в составе группы (обычно 2-4 человека) находитесь в реальном помещении: интерьер и декорации создают определенную атмосферу и вас ожидает сюжет или задачи, которые вам нужно преодолеть. Квесты подходят для разных поводов.</p>
             <a class="whatis-more mobile_hide" href="#">Подобрать</a>
           </div>
@@ -1520,104 +1508,104 @@
               </p>
             </div>
           </div>
-          <div class="col-sm-4 col-xs-12 mobile_hide">
-            <div class="feed-otziv">
-              <div class="feed-truncate"></div>
-              <h3>
-                <a href="{quest}">Многоликий Билли</a>
-              </h3>
-              <div class="feed-rating">
-                <div class="feed-stars">
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/semistar.svg">
-                    <img src="img/feed/semistar.png" alt="Звезда">
-                  </picture>
+                  <a class="collapsehref mobile_show" data-toggle="collapse" data-target="#feedcollapse">Больше отзывов</a>
+          <div class="collapse" id="feedcollapse">
+            <div class="col-sm-4 col-xs-12">
+              <div class="feed-otziv">
+                <div class="feed-truncate"></div>
+                <h3>
+                  <a href="{quest}">Многоликий Билли</a>
+                </h3>
+                <div class="feed-rating">
+                  <div class="feed-stars">
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/semistar.svg">
+                      <img src="img/feed/semistar.png" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="feed-number">8 голосов</div>
                 </div>
-                <div class="feed-number">8 голосов</div>
+                <div class="feed-who">
+                  <div class="feed-photo">
+                    <img src="img/feed/photo.jpg" alt="Фото отзыв">
+                  </div>
+                  <div class="feed-info">
+                    <div class="feed-name">Николай</div>
+                    <div class="feed-time">28.08.2017</div>
+                  </div>
+                </div>
+                <p>
+                  Точках о буквоград переписывается жизни, алфавит, страну вопрос но своего рыбного собрал lorem рукопись великий продолжил сих свою, все парадигматическая которой страна продолжил даль ведущими знаках они путь пунктуация! Страну жаренные подпоясал о великий заглавных использовало лучше моей ее не океана, путь, щеке текстов, сбить рекламных вскоре домах. Его, силуэт агенство страна. Большой на берегу вдали ты все силуэт скатился обеспечивает, рыбными решила дал, алфавит всемогущая которое свое встретил осталось свой путь что, вопроса, семь. Скатился бросил снова подпоясал, ведущими единственное, парадигматическая имени путь родного всемогущая маленький там. По всей единственное ее что если силуэт, переписывается, осталось пор о своего океана пунктуация бросил города проектах предупреждал ведущими своих, скатился страну использовало букв ipsum образ от всех ты? Путь что диких снова составитель гор образ за, оксмокс дал свой то моей одна запятых текстами лучше единственное власти великий жаренные, вдали буквоград, осталось lorem. Переписывается заманивший дорогу маленький рыбными, курсивных lorem взгляд дал имени встретил путь рот ему раз над города всемогущая вершину моей это власти сбить лучше использовало переулка живет на берегу! Власти, использовало. Наш грамматики оксмокс себя рукописи которой напоивший имени вопрос. Все, свою сбить дорогу имеет, щеке заманивший ее дал путь имени если переписывается текстами напоивший. Не свой, продолжил! Ipsum, текста продолжил вскоре переулка страну ему речью единственное бросил сбить запятой повстречался, реторический, заглавных назад что текстами даже своих до подпоясал рекламных толку продолжил текстов решила большой. Залетают маленькая пунктуация все. Власти, рукопись, ручеек последний напоивший деревни к
+                  <a class="more" href="#"></a>
+                </p>
               </div>
-              <div class="feed-who">
-                <div class="feed-photo">
-                  <img src="img/feed/photo.jpg" alt="Фото отзыв">
-                </div>
-                <div class="feed-info">
-                  <div class="feed-name">Николай</div>
-                  <div class="feed-time">28.08.2017</div>
-                </div>
-              </div>
-              <p>
-                Точках о буквоград переписывается жизни, алфавит, страну вопрос но своего рыбного собрал lorem рукопись великий продолжил сих свою, все парадигматическая которой страна продолжил даль ведущими знаках они путь пунктуация! Страну жаренные подпоясал о великий заглавных использовало лучше моей ее не океана, путь, щеке текстов, сбить рекламных вскоре домах. Его, силуэт агенство страна. Большой на берегу вдали ты все силуэт скатился обеспечивает, рыбными решила дал, алфавит всемогущая которое свое встретил осталось свой путь что, вопроса, семь. Скатился бросил снова подпоясал, ведущими единственное, парадигматическая имени путь родного всемогущая маленький там. По всей единственное ее что если силуэт, переписывается, осталось пор о своего океана пунктуация бросил города проектах предупреждал ведущими своих, скатился страну использовало букв ipsum образ от всех ты? Путь что диких снова составитель гор образ за, оксмокс дал свой то моей одна запятых текстами лучше единственное власти великий жаренные, вдали буквоград, осталось lorem. Переписывается заманивший дорогу маленький рыбными, курсивных lorem взгляд дал имени встретил путь рот ему раз над города всемогущая вершину моей это власти сбить лучше использовало переулка живет на берегу! Власти, использовало. Наш грамматики оксмокс себя рукописи которой напоивший имени вопрос. Все, свою сбить дорогу имеет, щеке заманивший ее дал путь имени если переписывается текстами напоивший. Не свой, продолжил! Ipsum, текста продолжил вскоре переулка страну ему речью единственное бросил сбить запятой повстречался, реторический, заглавных назад что текстами даже своих до подпоясал рекламных толку продолжил текстов решила большой. Залетают маленькая пунктуация все. Власти, рукопись, ручеек последний напоивший деревни к
-                <a class="more" href="#"></a>
-              </p>
             </div>
-          </div>
-          <div class="col-sm-4 col-xs-12 mobile_hide">
-            <div class="feed-otziv">
-              <div class="feed-truncate"></div>
-              <h3>
-                <a href="{quest}">Многоликий Билли</a>
-              </h3>
-              <div class="feed-rating">
-                <div class="feed-stars">
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/star.svg">
-                    <img src="img/feed/star.png" alt="Звезда">
-                  </picture>
-                  <picture>
-                    <source type="image/svg+xml" srcset="img/feed/semistar.svg">
-                    <img src="img/feed/semistar.png" alt="Звезда">
-                  </picture>
+            <div class="col-sm-4 col-xs-12">
+              <div class="feed-otziv">
+                <div class="feed-truncate"></div>
+                <h3>
+                  <a href="{quest}">Многоликий Билли</a>
+                </h3>
+                <div class="feed-rating">
+                  <div class="feed-stars">
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/star.svg">
+                      <img src="img/feed/star.png" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source type="image/svg+xml" srcset="img/feed/semistar.svg">
+                      <img src="img/feed/semistar.png" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="feed-number">8 голосов</div>
                 </div>
-                <div class="feed-number">8 голосов</div>
+                <div class="feed-who">
+                  <div class="feed-photo">
+                    <img src="img/feed/photo.jpg" alt="Фото отзыв">
+                  </div>
+                  <div class="feed-info">
+                    <div class="feed-name">Николай</div>
+                    <div class="feed-time">28.08.2017</div>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.
+                  <a class="more" href="#"></a>
+                </p>
               </div>
-              <div class="feed-who">
-                <div class="feed-photo">
-                  <img src="img/feed/photo.jpg" alt="Фото отзыв">
-                </div>
-                <div class="feed-info">
-                  <div class="feed-name">Николай</div>
-                  <div class="feed-time">28.08.2017</div>
-                </div>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.
-                <a class="more" href="#"></a>
-              </p>
             </div>
           </div>
         </div>
         <div class="feed-more mobile_hide">
           <a href="#">Больше отзывов</a>
-        </div>
-        <a class="collapsehref mobile_show" href="#">Больше отзывов</a>
-        <div class="collapse" id="feedcollapse">
         </div>
         <div class="mobile-tric-2 mobile_show">
           <img src="img/bgi/triangles-circle.svg" alt="">
@@ -1993,16 +1981,73 @@
       <div class="modal fade" id="region">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>Выбрать город</h4>
+            <div id="region-cities" class="region-cities">
+              <a href="#"><span>АНижний Новгород</span></a>
+              <a href="#"><span>БНижний Новгород</span></a>
+              <a href="#"><span>ВНижний Новгород</span></a>
+              <a href="#"><span>ГНижний Новгород</span></a>
+              <a href="#"><span>ДНижний Новгород</span></a>
+              <a href="#"><span>ЕНижний Новгород</span></a>
+              <a href="#"><span>ЖНижний Новгород</span></a>
+              <a href="#"><span>ЗНижний Новгород</span></a>
+              <a href="#"><span>ИНижний Новгород</span></a>
+              <a href="#"><span>КНижний Новгород</span></a>
+              <a href="#"><span>ЛНижний Новгород</span></a>
+              <a href="#"><span>МНижний Новгород</span></a>
+              <a href="#"><span>ННижний Новгород</span></a>
+              <a href="#"><span>ОНижний Новгород</span></a>
+              <a href="#"><span>ПНижний Новгород</span></a>
+              <a href="#"><span>РНижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
+              <a href="#"><span>Нижний Новгород</span></a>
             </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+            <h4>Другие страны</h4>
+            <div class="region-countries">
+              <a href="#"><span>Беларусь</span></a>
+              <a href="#"><span>Беларусь</span></a>
+              <a href="#"><span>Беларусь</span></a>
+              <a href="#"><span>Беларусь</span></a>
+              <a href="#"><span>Беларусь</span></a>
+              <a href="#"><span>Беларусь</span></a>
+              <a href="#"><span>Беларусь</span></a>
             </div>
           </div>
         </div>
@@ -2031,8 +2076,9 @@
             <form id="form-phone">
             <div class="modal-phone-tel"><input name="phone" type="number" id="phone-modal"></div>
             <input id="modal-button-phone" type="submit" class="modal-button-phone" value="Заказать обратный звонок">
-            <div class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;"> 
-                        <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
+            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+            <div class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
+            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
             </form>
           </div>
         </div>
@@ -2044,7 +2090,7 @@
             <img src="img/mobile/close.svg" alt="">
           </a>
           <ul>
-            <li><a href="#">Город</a></li>
+            <li><a data-toggle="modal" data-target="#region">Город</a></li>
             <li><a href="#">Квесты</a></li>
             <li><a href="#">Расписание</a></li>
             <li><a href="#">Другие развлечения</a></li>
