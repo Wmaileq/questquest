@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 5; i++) {
     var q = $('.mobile-quest-slider:eq(' + i + ')').children().length;
     $('.mobile-quest-wrapper:eq(' + i + ')').width(q * 25 + 'rem');
 };
