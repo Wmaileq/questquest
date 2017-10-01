@@ -69,17 +69,12 @@ $(document).ready(function(){
     });
 /* Плавающая менюшка */
     $(window).scroll(function(){
-       if (($(window).scrollTop() - 28) >= $(".navigation").position().top ) {
+       if (($(window).scrollTop() - 28) >= 100 ) {
         $("header").css('transform', 'translateY(-5rem)');
-        $(".navigation-menu").addClass('navigation-sticky');
-        $(".navigation").css('height', '19rem');
-        $(".navigation").css('margin-top', '7.7rem');
-    } 
-        else {
+        $("#nav-fixed").addClass('navigation-sticky');
+    } else {
             $("header").css('transform', 'translateY(0)');
-            $(".navigation-menu").removeClass('navigation-sticky');
-            $(".navigation").css('height', '26.7rem');
-            $(".navigation").css('margin-top', '0rem');
+            $("#nav-fixed").removeClass('navigation-sticky');
         }
     })
 /* Формы */
