@@ -237,7 +237,7 @@
         <div class="row navigation-menu">
           <div class="col-sm-9">
             <ul>
-              <li class="slicy"><a href="#quests">Квесты</a></li>
+              <li class="active slicy"><a href="#quests">Квесты</a></li>
               <li class="slicy"><a href="#">Другие развлечения</a></li>
               <li class="slicy"><a href="#feed">Отзывы</a></li>
               <li class="slicy"><a href="#video">Видео</a></li>
@@ -341,12 +341,13 @@
           <div class="col-sm-4">
             <div class="quest-item">
               <div class="quest-img"><a href="{quest}"><img src="img/quest/1.jpg" alt="Многоликий Билли"></a></div>
-              <a class="quest-cat" href="{category}">Детям</a>
               <span class="quest-top">
-              <picture>
-                <source type="image/svg+xml" srcset="img/quest/top.svg">
-                <img src="img/quest/top.png" alt="ТОП-Квест">
-              </picture>ТОП-Квест</span>
+                <a class="quest-cat" href="{category}">Детям</a>
+                <picture>
+                  <source type="image/svg+xml" srcset="img/quest/top.svg">
+                  <img src="img/quest/top.png" alt="ТОП-Квест">
+                </picture>ТОП-Квест
+              </span>
               <div class="quest-price">От 1000 руб./чел.</div>
               <div class="quest-video">
                 <div data-video-src="https://www.youtube.com/embed/RJHYuNGcKXM">
@@ -372,8 +373,8 @@
           <div class="col-sm-4">
             <div class="quest-item">
               <div class="quest-img"><a href="{quest}"><img src="img/quest/2.jpg" alt="Многоликий Билли"></a></div>
-              <a class="quest-cat" href="{category}">Детям</a>
               <span class="quest-top">
+              <a class="quest-cat" href="{category}">Детям</a>
               <picture>
                 <source type="image/svg+xml" srcset="img/quest/top.svg">
                 <img src="img/quest/top.png" alt="ТОП-Квест">
@@ -2081,15 +2082,15 @@
                     </picture>
                   </a>
                 </li>
-                <li class="mobile_hide">
-                  <a href="#">
-                    <picture>
-                      <source type="image/svg+xml" srcset="img/footer/appstore.svg">
-                      <img src="img/footer/appstore.png" alt="Аппстор">
-                    </picture>
-                  </a>
-                </li>
               </ul>
+            </div>
+            <div class="footer-app_store mobile_hide">
+              <a href="#">
+                <picture>
+                  <source type="image/svg+xml" srcset="img/footer/appstore.svg">
+                  <img src="img/footer/appstore.png" alt="Аппстор">
+                </picture>
+              </a>
             </div>
             <div class="footer-menu mobile_show">
               <ul>
@@ -2193,7 +2194,7 @@
             <h4>Другие страны</h4>
             <div class="region-countries">
               <a href="#"><span>Беларусь</span></a>
-              <a href="#"><span>Беларусь</span></a>
+              <a href="#"><span>Казахстан</span></a>
               <a href="#"><span>Беларусь</span></a>
               <a href="#"><span>Беларусь</span></a>
               <a href="#"><span>Беларусь</span></a>

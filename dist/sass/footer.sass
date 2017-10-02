@@ -9,28 +9,8 @@ footer
 	padding-left: 10rem
 	padding-right: 10rem
 	.social-links
-		line-height: inherit
-		height: inherit
-		width: 100%
-		text-align: right
-		padding-left: 8rem
-		margin-bottom: 2rem
-		ul
-			margin-left: 0
-			width: 100%
-			text-align: right
-			a
-				border-bottom: 0
-				text-decoration: none
-			li
-				margin-right: 0
-				vertical-align: middle
-				line-height: 4.9rem
-			li:last-of-type
-				width: 11.5rem
-				img
-					width: 11.5rem
-					height: auto
+		a
+			border-bottom: 0
 	h5
 		font-size: 1.5rem
 		color: #444
@@ -50,6 +30,8 @@ footer
 	&-ul-right
 		text-align: right
 		font-size: 1.6rem
+		span
+			display: block
 		ul
 			margin-top: 0
 			text-align: right
@@ -61,6 +43,10 @@ footer
 				transition: all 0.1s
 				&:hover
 					border-bottom: 1px dashed transparent
+	&-app_store
+		display: inline-block
+		img
+			width: 13.5rem
 @media (max-width: 767px)
 	footer
 		height: auto
