@@ -8,6 +8,10 @@
 		a
 			color: #333
 			text-decoration: none
+			border-bottom: 2px dashed #333
+			transition: all 0.2s
+			&:hover
+				border-bottom: 2px dashed transparent
 	p
 		font-size: 1.7rem
 		font-weight: 300
@@ -30,10 +34,13 @@
 		outline: none
 		margin-left: 53rem
 		margin-top: 4rem
+		border-bottom: 1px dashed #ff6600
+		transition: all 0.2s
 		&:hover, &:focus
 			text-decoration: none
 			color: #ff6600
-			border-bottom: 1px dashed #ff6600
+			border-bottom: 1px dashed transparent
+			
 .whatisbg
 	position: relative
 	&-cloud

@@ -17,11 +17,12 @@
 		position: relative
 		height: auto
 		width: 100%
-		border-radius: 0.8rem
+		border-radius: 1rem
 		overflow: hidden
 		box-shadow: 0 0 2.5rem 0 rgba(0,0,0,0.15)
 		background-color: #FFF
 		padding-bottom: 5rem
+		height: 64rem
 	&-img
 		position: relative
 		height: 32.6rem
@@ -135,6 +136,7 @@
 		display: inline-block
 		margin-left: 3rem
 		margin-top: 2.5rem
+		line-height: 1.9rem
 		&:before
 			content: ' '
 			position: absolute
@@ -151,6 +153,7 @@
 		display: inline-block
 		margin-left: 3rem
 		margin-top: 2.5rem
+		line-height: 1.9rem
 		&:before
 			content: ' '
 			position: absolute
@@ -167,6 +170,7 @@
 		display: inline-block
 		margin-left: 3rem
 		margin-top: 1rem
+		line-height: 1.9rem
 		&:before
 			content: ' '
 			position: absolute
@@ -183,6 +187,7 @@
 		display: inline-block
 		margin-left: 2.8rem
 		margin-top: 1rem
+		line-height: 1.9rem
 		&:before
 			content: ' '
 			position: absolute
@@ -219,9 +224,11 @@ a.quest-more
 	right: 2.2rem
 	font-size: 1.6rem
 	color: #333
-	text-decoration: none
+	border-bottom: 1px dashed #333
+	transition: all 0.2s
 	&:hover
-		text-decoration: underline
+		border-bottom: 1px dashed transparent
+		text-decoration: none
 a.quest-review
 	position: relative
 	display: inline-block
@@ -294,6 +301,7 @@ a.quest-review
 		color: #FFF
 		text-align: center
 		transition: all 0.2s
+		display: block
 		&:hover
 			transform: scale(1.05)
 		span
