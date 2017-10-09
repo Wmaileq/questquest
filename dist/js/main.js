@@ -1,7 +1,7 @@
 /* Слайдер категорий */
 $(document).ready(function(){
 	var slides = $('.cat_s-cat ul').children().length;
-	$('.cat_s-cat').width(17.5 * slides + 'rem');
+	$('.cat_s-cat').width(17.4 * slides + 'rem');
 	var numSlides = 4;
 	var NowSlide = 0
 	$('.cat_s-right_b').click(function(){
@@ -70,10 +70,8 @@ $(document).ready(function(){
 /* Плавающая менюшка */
     $(window).scroll(function(){
        if (($(window).scrollTop() - 28) >= 100 ) {
-        $("header").css('transform', 'translateY(-5rem)');
         $("#nav-fixed").addClass('navigation-sticky');
     } else {
-            $("header").css('transform', 'translateY(0)');
             $("#nav-fixed").removeClass('navigation-sticky');
         }
     })

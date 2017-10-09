@@ -5,25 +5,28 @@
 	&-menu
 		border-bottom: 1px solid #bfbfbf
 		transition: 0.2s
-	ul
-		margin-left: 1.5rem
-		display: flex
-		justify-content: space-between
-		list-style-type: none
-		font-size: 2rem
-		height: 7.7rem
-		line-height: 7.7rem
-		transition: height, line-height 0.2s
-		.active
-			border-bottom: 2px solid #f05a29
-			height: 7.8rem
-		li
-			display: inline-block
-			a
-				color: #333333
-				text-decoration: none
-				&:hover
+		ul
+			margin-left: 4.1rem
+			list-style-type: none
+			font-size: 2rem
+			height: 7.7rem
+			line-height: 7.7rem
+			transition: height, line-height 0.2s
+			.active
+				border-bottom: 2px solid #f05a29
+				height: 7.8rem
+				a
 					color: #f05a29
+			li
+				display: inline-block
+				margin-right: 8.2rem
+				&:last-of-type
+					margin-right: 0
+				a
+					color: #333333
+					text-decoration: none
+					&:hover
+						color: #f05a29
 	&-offer
 		border-left: 1px solid #bfbfbf
 		padding-left: 3.3rem
@@ -40,7 +43,7 @@
 	&-form
 		display: inline-block
 		vertical-align: top
-		margin-top: 2.4rem
+		margin-top: 2.1rem
 		margin-left: 2.4rem
 		.error
 			border-color: red
@@ -90,7 +93,7 @@
 		display: block
 		padding-left: 3.6rem
 		border-left: 1px solid #bfbfbf
-		height: 7rem
+		height: 6.9rem
 		input
 			height: 1.2rem
 			width: 1.2rem
@@ -123,6 +126,7 @@
 		color: #f05a29!important
 .cat_s
 	width: 100%
+	position: relative
 	&-viewport
 		position: relative
 		width: 67rem
@@ -140,31 +144,39 @@
 			height: 16.8rem
 			padding-top: 4.1rem
 			margin-left: 0
+			font-size: 0
 			li
 				width: 17.4rem
 				text-align: center
 				border-right: 1px solid #ebebeb
+				display: inline-block
+				height: 11.6rem
+				&.cat_s-active
+					a
+						color: #f05a29
+						border-bottom: 2px solid #f05a29	
 				img
 					width: 7.5rem
 					height: 6rem
 					display: block
-					margin: 0 auto
+					margin: 0 auto 3rem auto
 					transition: transform 0.1s
 				a
 					font-size: 1.8rem
 					text-decoration: none
+					color: #333
 					&:hover
 						color: #f05a29
 						img
 							transform: scale(1.07)
 					&:active
-						border-bottom: 2px solid #f05a29		
+						border-bottom: 2px solid #f05a29	
 	&-left_b
 		position: absolute
 		height: 100%
 		width: 4rem
 		top: 0
-		left: 3rem
+		left: 0rem
 		background-size: cover!important
 		border: 0
 		outline: 0
@@ -189,10 +201,10 @@
 	&-right_b
 		position: absolute
 		height: 100%
-		width: 2rem
+		width: 4rem
 		background-size: cover!important
 		top: 0
-		right: 2.8rem
+		right: 0rem
 		border: 0
 		outline: 0
 		cursor: pointer

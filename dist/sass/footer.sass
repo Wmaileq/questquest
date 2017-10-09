@@ -22,6 +22,11 @@ footer
 		margin-top: 2rem
 		a
 			color: #444
+			transition: all 0.2s
+			border-bottom: 1px dashed transparent
+			&:hover
+				text-decoration: none
+				border-bottom: 1px dashed #888
 		li
 			margin-top: 0.5rem
 			font-size: 1.5rem
@@ -50,7 +55,6 @@ footer
 @media (max-width: 767px)
 	footer
 		height: auto
-		margin-bottom: 10.8rem
 	.footer
 		padding: 0 1.5rem
 		padding-top: 5rem
@@ -67,8 +71,13 @@ footer
 				margin: 0 auto
 		&-menu
 			text-align: center
+			margin-top: 4rem
 			ul
 				text-align: center
+				li
+					display: block
+					height: 5rem
+					margin-top: 0
 				a
 					font-size: 2rem
 					font-weight: 400
@@ -78,29 +87,29 @@ footer
 			text-align: center
 			span
 				display: block
-				margin-top: 7rem
+				margin-top: 3rem
 				margin-bottom: 3rem
 		&-call
 			position: fixed
 			bottom: 0
 			left: 0
 			width: 100%
-			height: 10.8rem
+			height: 6.5rem
 			background-color: rgba(0,0,0,0.75)
-			padding-top: 2.5rem
+			padding-top: 1rem
 			z-index: 500
 			img
 				display: inline-block
-				width: 5rem
+				width: 2.6rem
+				margin-right: 1.8rem
 			&-cent
-				margin: 0 auto
-				width: 22rem
 				display: block
+				text-align: center
 			&-text
 				display: inline-block
 				color: #FFF
 				font-weight: 700
-				font-size: 2.7rem
+				font-size: 2rem
 				vertical-align: middle
 	.social-links img, .social-links ul li
 		width: 4.5rem!important

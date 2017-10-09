@@ -15,7 +15,6 @@
 		margin-top: 6rem
 	&-item
 		position: relative
-		height: auto
 		width: 100%
 		border-radius: 1rem
 		overflow: hidden
@@ -223,12 +222,23 @@ a.quest-more
 	bottom: 2rem
 	right: 2.2rem
 	font-size: 1.6rem
-	color: #333
-	border-bottom: 1px dashed #333
+	color: #f05a29
+	border-bottom: 1px dashed #f05a29
 	transition: all 0.2s
+	font-weight: 700
 	&:hover
-		border-bottom: 1px dashed transparent
+		border-bottom: 2px dashed transparent
 		text-decoration: none
+	&:after
+		position: absolute
+		content: ''
+		background: url(../img/cat_s/arrow_h.svg) center center no-repeat
+		height: 1.2rem
+		width: 0.9rem
+		display: inline-block
+		transition: all 0.15s
+		top: 0.7rem
+		right: -1.3rem
 a.quest-review
 	position: relative
 	display: inline-block
@@ -271,7 +281,7 @@ a.quest-review
 		left: -14rem
 	&_2
 		top: 99rem
-		right: -3rem
+		right: -6rem
 	img
 		transform: rotate(-30deg)
 		width: 5rem
@@ -326,14 +336,14 @@ a.quest-review
 		height: 2.1rem
 .arrow
 	position: absolute
-	top: 14rem
+	top: 19rem
 	left: 67rem
 	img
 		width: 6.2rem
 		transform: rotate(-10deg)
 .circles
 	position: absolute
-	top: 26rem
+	top: 24rem
 	right: 0rem
 	img
 		width: 6.9rem
@@ -415,6 +425,7 @@ a.quest-review
 			background-color: rgba(0,0,0,0.4)
 			border-top-left-radius: 1rem
 			border-top-right-radius: 1rem
+			z-index: 100
 		&-header
 			height: 12.4rem
 			padding: 0 2rem
@@ -422,7 +433,7 @@ a.quest-review
 			font-weight: 700
 			line-height: 12.4rem
 			img
-				height: 5.3rem
+				height: 6.4rem
 				width: 6.4rem
 				margin-right: 1rem
 			a
@@ -430,57 +441,71 @@ a.quest-review
 				text-decoration: none
 		&-viewport
 			width: 100%
-			min-height: 37.5rem
+			height: 37.5rem
 			position: relative
 			overflow-x: scroll
 			border-bottom: 1px solid #dcdcdc
 		&-wrapper
 			position: relative
 			width: 200rem
-			min-height: 36rem
+			height: 31.5rem
 			transition: 0.8s
 			ul
 				position: relative
-				height: 33rem
+				height: 31.5rem
 				width: 100%
+				font-size: 0
 				li
 					display: inline-block
 					position: relative
-					margin: 0 2rem
-					width: 20rem
+					margin: 0 1rem
+					width: 20.4rem
 					vertical-align: top
 					border-radius: 1.5rem
 					box-shadow: 0 0 1.5rem 0rem rgba(0,0,0,0.15)
-					padding-bottom: 4rem
+					padding-bottom: 2.5rem
+					height: 31.5rem
 					a
 						color: #333
 						text-decoration: none
+						height: 18.6rem
 					h6
-						margin-top: 1rem
+						margin-top: 0.2rem
 						font-size: 1.8rem
 						font-weight: 700
 						color: #333
-						padding-left: 1rem
-					img
-						width: 100%
-						max-height: 23rem
+						padding-left: 1.2rem
+						padding-right: 1.2rem
+						margin-bottom: 0.2rem
+		&-image
+			position: absolute
+			height: 18.6rem
+			width: auto
+			border-top-right-radius: 1.5rem
+			border-top-left-radius: 1.5rem
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			min-width: 100%
 		&-price
 			position: absolute
 			top: 1rem
 			right: 0
-			max-width: 9rem
+			max-width: 10.5rem
 			color: #FFF
 			font-weight: 700
-			font-size: 1.5rem
-			padding: 1rem 1rem 1rem 1.5rem
+			font-size: 1.3rem
+			padding: 1rem 0.5rem 1rem 1rem
 			background: url(../img/quest/subprice.svg) no-repeat
 			background-size: cover
-
+			z-index: 200
 		&-banner
 			vertical-align: top
 			max-height: 23rem
 			position: relative
 			display: block
+			border-top-right-radius: 1.5rem
+			border-top-left-radius: 1.5rem
 		&-light_line
 			position: absolute
 			bottom: 0
@@ -501,6 +526,9 @@ a.quest-review
 				height: 1.4rem
 				bottom: 1rem
 				left: 1rem
+		&-footer
+			display: block
+			font-size: 0
 		&-video
 			width: 3rem
 			height: 3rem
@@ -515,9 +543,10 @@ a.quest-review
 				height: 3.6rem
 				border-radius: 50%
 				background-color: rgba(0,0,0,0.5)
-				bottom: 0.6rem
-				left: 1.5rem
+				top: 14rem
+				left: 1.1rem
 				display: inline-block
+				z-index: 300
 		&-metro
 			font-size: 1.5rem
 			margin-top: 1.5rem
@@ -573,6 +602,8 @@ a.quest-review
 			color: #FFF
 			top: 1.6rem
 			left: 1.2rem
+			font-size: 1.2rem
+			z-index: 200
 			&:before
 				content: ' '
 				display: inline-block
@@ -583,16 +614,16 @@ a.quest-review
 				background-size: cover
 	.mobile
 		&-Xgrey-2
-			top: 13rem
-			right: 5rem
+			top: 2rem
+			right: 2rem
 			position: absolute
 			img
 				width: 2.5rem
 				height: 2.5rem
 				transform: rotate(-30deg)
 		&-Xgrey-3
-			top: 71rem
-			right: -1rem
+			top: 51rem
+			right: -2.5rem
 			position: absolute
 			img
 				width: 6rem
@@ -608,16 +639,16 @@ a.quest-review
 				height: 1.2rem
 				transform: rotate(-30deg)
 		&-circles-1
-			top: 68rem
-			right: 8rem
+			top: 53rem
+			right: 9rem
 			position: absolute
 			img
 				width: 4rem
 				height: 4rem
 				transform: rotate(-135deg)
 		&-arrows-1
-			top: 107rem
-			left: -1rem
+			top: 96rem
+			left: 1rem
 			position: absolute
 			img
 				height: 2rem
@@ -638,15 +669,15 @@ a.quest-review
 				height: 2rem
 				width: 5.5rem
 		&-clouds-2
-			bottom: 56rem
-			left: 3rem
+			bottom: 13rem
+			left: -1rem
 			position: absolute
 			img
 				height: 2rem
 				width: 5.5rem
 		&-tric-1
-			bottom: 50rem
-			right: 2rem
+			bottom: 81rem
+			left: 2rem
 			position: absolute
 			img
 				height: 2.8rem
@@ -661,45 +692,74 @@ a.quest-review
 				transform: rotate(-30deg)
 				opacity: 0.7
 		&-arrows-2
-			bottom: 10rem
-			left: 1rem
+			bottom: 58rem
+			right: 2rem
 			position: absolute
 			img
 				height: 2rem
 				width: 5.5rem
+				transform: rotate(180deg)
+		&-oblako-3
+			top: 0.5rem
+			left: 11rem
+			position: absolute
+			img
+				width: 3.2rem
+				height: 1.28rem
+				opacity: 0.9
+		&-Xgrey-10
+			top: 6rem
+			right: -1.8rem
+			position: absolute
+			img
+				width: 4rem
+				height: 4rem
+				transform: rotate(20deg)
+		&-circles-5
+			bottom: 12rem
+			right: 0rem
+			position: absolute
+			img
+				width: 4rem
+				height: 4rem
+				transform: rotate(-10deg)
 	.quest-amount, .quest-blood, .quest-actor, .quest-time
+		display: inline-block
 		font-size: 1.2rem
-		margin-left: 1rem
-		padding-left: 1.6rem
-		margin-top: 2rem
+		margin-left: 1.2rem
+		margin-top: 1rem
 		font-weight: 300
-		vertical-align: top
-		&:before
-			width: 1.2rem
-			height: 1.5rem
-	.quest-amount, .quest-actor
+		padding-left: 0
+		line-height: 1.4rem
 		width: auto
-	.quest-blood, .quest-time
-		width: auto
-		margin-left: 0.7rem
-		padding-left: 1.8rem
-	.quest-actor, .quest-time
-		margin-top: 2rem
-	.quest-actor
 		&:before
-			width: 1.4rem
-	.quest-time
-		&:before
-			width: 1.5rem
-	.quest-blood
-		&:before
-			width: 1.1rem
+			display: none
+		img
+			height: 1.4rem
+			left: auto
+			min-width: auto
+			vertical-align: top
+			margin-right: 0.2rem
 	.quest-more
 		font-size: 1.3rem
-		color: #333
+		color: #f05a29
+		border-bottom: 1px dashed #f05a29
 		position: absolute
 		bottom: 1rem
-		right: 1rem
+		right: 2rem
+		&:after
+			position: absolute
+			content: ''
+			background: url(../img/cat_s/arrow_h.svg) center center no-repeat
+			height: 1rem
+			width: 0.65rem
+			display: inline-block
+			transition: all 0.15s
+			top: 0.6rem
+			right: -1rem
 	#line1, #line2, #line3, #line4
 		&::-webkit-scrollbar-thumb
 			background-color: #FFF
+	.quest
+		h2
+			font-size: 2.6rem
