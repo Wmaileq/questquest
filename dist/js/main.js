@@ -63,10 +63,18 @@ $(document).ready(function(){
         $('.videoq-main').show();
         var scroll = $('.videoq').position().top;
         $("html, body").animate({scrollTop: scroll}, 1000);
-        var text = 'Тут должен быть текст под видео, main.js либо скрытый блок в карточке видео';
-        $('.videoq-mb p').html(text);
+      });
+      $(".mobile-quest-video-bg").click(function(){
+        var videosrc = $(this).attr('data-video-src');
+        console.log(videosrc);
+        $('.videoq-main').attr('src', videosrc + '?modestbranding=0&amp;showinfo=0&amp;rel=0&amp;loop=1&autoplay=1')
+        $('.videoq-preview').hide();
+        $('.videoq-main').show();
+        var scroll = $('.videoq').position().top;
+        $("html, body").animate({scrollTop: scroll}, 1000);
       });
     });
+
 /* Плавающая менюшка */
     $(window).scroll(function(){
        if (($(window).scrollTop() - 28) >= 100 ) {

@@ -1,11 +1,18 @@
 $(document).ready(function(){
+    $('.scrollbar-inner').scrollbar();
+});
+$(document).ready(function(){
     for (var i = 0; i < 5; i++) {
     var q = $('.mobile-quest-slider:eq(' + i + ')').children().length;
-    $('.mobile-quest-wrapper:eq(' + i + ')').width(q * 22.4 + 'rem');
+    if ( q != 0 ) {
+    $('.mobile-quest-wrapper:eq(' + i + ')').width(q * 26.2 + 'rem');
+  } else {
+    $('.mobile-quest-wrapper:eq(' + i + ')').parent().parent().hide();
+  }
 };
 });
 $(document).ready(function(){
-    $('.mobile-quest-viewport').scrollLeft(200);
+    $('.mobile-quest-viewport').scrollLeft(230);
     $('.mobile-banner-view').scrollLeft(70);
 });
 $(document).ready(function(){
