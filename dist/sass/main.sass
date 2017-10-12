@@ -2,6 +2,9 @@
 	margin: 0
 	padding: 0
 	box-sizing: border-box
+	&:hover, &:focus, &:active
+		text-decoration: none!important
+		outline: none!important
 html
 	font-size: 10px
 body
@@ -355,6 +358,8 @@ input::-webkit-inner-spin-button
 			&_superhero
 				background: url(../img/mobile/superhero.svg) center center no-repeat
 				background-size: cover
+				img
+					width: 100%
 			&_callback
 				background: url(../img/quest/callback-b.svg) center center no-repeat
 				background-size: cover

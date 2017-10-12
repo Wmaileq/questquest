@@ -26,8 +26,9 @@
 		position: relative
 		height: 32.6rem
 		overflow: hidden
-		border-top-left-radius: 1rem
-		border-top-right-radius: 1rem
+		border-top-left-radius: 1.5rem
+		border-top-right-radius: 1.5rem
+		z-index: 0
 		img
 			transition: transform 0.3s
 			height: 100%
@@ -227,7 +228,7 @@ a.quest-more
 	transition: all 0.2s
 	font-weight: 700
 	&:hover
-		border-bottom: 2px dashed transparent
+		border-bottom: 1px dashed transparent
 		text-decoration: none
 	&:after
 		position: absolute
@@ -425,7 +426,7 @@ a.quest-review
 			background-color: rgba(0,0,0,0.4)
 			border-top-left-radius: 1rem
 			border-top-right-radius: 1rem
-			z-index: 100
+			z-index: 101
 		&-header
 			height: 12.4rem
 			padding: 0 0 0 2rem
@@ -488,11 +489,12 @@ a.quest-review
 			left: 50%
 			transform: translateX(-50%)
 			min-width: 100%
+			z-index: 100
 		&-price
 			position: absolute
 			top: 1rem
 			right: 0
-			max-width: 10.5rem
+			max-width: 14rem
 			color: #FFF
 			font-weight: 700
 			font-size: 1.3rem
