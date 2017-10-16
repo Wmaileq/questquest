@@ -34,7 +34,7 @@
             <div class="phone"><span class="mobile_hide">Друг, звони в любое время:</span> <a href="tel:+74993222940" rel="nofollow">+7 (499) 322-29-40</a>
             </div>
           </div>
-          <div class="col-sm-5 col-sm-offset-3 social mobile_hide">
+          <div class="col-sm-5 social mobile_hide">
             <span>И присоединяйся к нам в соцсетях</span>
             <div class="social-links">
               <ul>
@@ -113,7 +113,7 @@
 					<li><a href="#">Расписание</a></li>           
 					<li><a href="#">Отзывы</a></li>
 					<li class="nav_hide"><a href="#">Подарочные карты</a></li>
-					<li class="nav_hide"><a href="#">Открыть квест</a></li>
+					<li class="nav_hide"><a data-toggle="modal" data-target="#modal-new" href="#">Открыть квест</a></li>
 					<li><a href="#">Блог</a></li>
 					<li class="nav_show"><a href="#">Видео</a></li>
 					<li class="nav_hide"><a href="#">Контакты</a></li>
@@ -616,7 +616,7 @@
           </div>
         </div>
         <!-- Фоновые мелочи -->
-        <div class="crest_small crest_small_1 rellax" data-rellax-speed="-1.5">
+        <div class="crest_small crest_small_1 rellax" data-rellax-speed="-2.5">
           <img src="img/bgi/X.svg">
         </div>
         <div class="crest_small crest_small_2 rellax" data-rellax-speed="-1.5">
@@ -625,7 +625,7 @@
         <div class="crest_small crest_small_3 rellax" data-rellax-speed="-1.5">
           <img src="img/bgi/X.svg">
         </div>
-        <div class="crest_small crest_small_4 rellax" data-rellax-speed="1">
+        <div class="crest_small crest_small_4 rellax" data-rellax-speed="-1">
           <img src="img/bgi/X.svg">
         </div>
         <div class="crest_big crest_big_1 rellax" data-rellax-speed="-2">
@@ -634,14 +634,14 @@
         <div class="crest_big crest_big_2 rellax" data-rellax-speed="-1.5">
           <img src="img/bgi/X.svg">
         </div>
-        <div class="quest-circle-1 rellax" data-rellax-speed="0">
+        <div class="quest-circle-1">
         </div>
-        <div class="quest-circle-2 rellax" data-rellax-speed="0">
+        <div class="quest-circle-2 rellax" data-rellax-speed="-2">
         </div>
-        <div class="quest-circles-1 rellax" data-rellax-speed="0">
+        <div class="quest-circles-1">
           <img src="img/bgi/circles2.svg" alt="">
         </div>
-        <div class="quest-circles-2 rellax" data-rellax-speed="0">
+        <div class="quest-circles-2 rellax" data-rellax-speed="-1">
           <img src="img/bgi/circles2.svg" alt="">
         </div>
       </div>
@@ -788,6 +788,35 @@
       <div class="mobile-quest-viewport scrollbar-inner">
         <div class="mobile-quest-wrapper">
           <ul class="mobile-quest-slider">
+            <li>
+              <a href="#" class="mobile-quest-banner">
+                <div class="mobile-quest-overlay"></div>
+                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+                <div class="mobile-quest-top">ТОП-Квест</div>
+                <div class="mobile-quest-price">От 1000 р\чел</div>  
+              </a>
+              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+              <a class="mobile-quest-footer" href="#">
+                <h6>Название квеста</h6>
+                <div class="quest-amount">
+                  <img src="img/quest/amount.svg" alt="20-100 игроков">
+                  4-6 игроков
+                </div>
+                <div class="quest-blood">
+                  <img src="img/quest/blood.svg" alt="">
+                  Кровь
+                </div>
+                <div class="quest-actor">
+                  <img src="img/quest/actor.svg" alt="">
+                  Актёр
+                </div>
+                <div class="quest-time">
+                  <img src="img/quest/time.svg" alt="">
+                  60 минут
+                </div>
+                <div class="quest-more">Подробнее</div>
+              </a>
+            </li>
             <li>
               <a href="#" class="mobile-quest-banner">
                 <div class="mobile-quest-overlay"></div>
@@ -1246,19 +1275,19 @@
             <a class="quest-banner_all quest-banner_1" href="#"><span>Играйте в QuestQuest прямо с телефона!</span></a>
           </div>
           <!-- Фоновые штуки -->
-          <div class="cloud rellax" data-rellax-speed="0.3">
+          <div class="cloud">
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/clouds.svg">
               <img src="img/bgi/clouds.png" alt="Облачко">
             </picture>
           </div>
-          <div class="arrow rellax" data-rellax-speed="0.2">
+          <div class="arrow">
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/arrrrows.svg">
               <img src="img/bgi/arrrrows.png" alt="Стрелочка">
             </picture>
           </div>
-          <div class="circles rellax" data-rellax-speed="-0.1">
+          <div class="circles">
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/circles1.svg">
               <img src="img/bgi/circles1.png" alt="Описание">
@@ -1470,10 +1499,10 @@
       <div class="quest-cir-tri-1">
         <img src="img/bgi/triangles-circle.svg" alt="">
       </div>
-      <div class="quest-crest-1">
+      <div class="quest-crest-1 rellax" data-rellax-speed="-2">
         <img src="img/bgi/X.svg" alt="">
       </div>
-      <div class="quest-shtuka-1">
+      <div class="quest-shtuka-1 rellax" data-rellax-speed="-3">
         <img src="img/bgi/circle-triangle.svg" alt="">
       </div>
       </div>
@@ -1764,31 +1793,31 @@
             </div>
           </div>
               <!-- Фоновые штуки -->
-          <div class="whatisbg-cloud rellax mobile_hide" data-rellax-speed="0.3">
+          <div class="whatisbg-cloud mobile_hide">
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/clouds.svg">
               <img src="img/bgi/clouds.png" alt="Облачко">
             </picture>
           </div>
-          <div class="whatisbg-trci rellax mobile_hide" data-rellax-speed="0.1">
+          <div class="whatisbg-trci mobile_hide">
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/circle-triangle.svg">
               <img src="img/bgi/circle-triangle.png" alt="Шар и Треугольник">
             </picture>
           </div>
-          <div class="whatisbg-cloud2 rellax mobile_hide" data-rellax-speed="0.3">
+          <div class="whatisbg-cloud2 mobile_hide" >
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/clouds.svg">
               <img src="img/bgi/clouds.png" alt="Облачко">
             </picture>
           </div>
-          <div class="whatisbg-arrow rellax mobile_hide" data-rellax-speed="0">
+          <div class="whatisbg-arrow mobile_hide">
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/arrrrows2.svg">
               <img src="img/bgi/arrrrows2.png" alt="Облачко">
             </picture>
           </div>
-          <div class="whatisbg-crestik rellax mobile_hide" data-rellax-speed="0.2">
+          <div class="whatisbg-crestik mobile_hide">
             <picture>
               <source type="image/svg+xml" srcset="img/bgi/X.svg">
               <img src="img/bgi/X.png" alt="Описание">
@@ -1796,7 +1825,7 @@
           </div>
         </div>
       </div>
-      <div class="mobile-circles-2">
+      <div class="mobile-circles-2 mobile_show">
         <img src="img/bgi/circles2.svg" alt="">
       </div>
     </section>
@@ -2087,19 +2116,19 @@
           </div>
         </div>
         <!-- Фон -->
-        <div class="videoq-crest rellax mobile_hide" data-rellax-speed="0.1">
+        <div class="videoq-crest rellax mobile_hide" data-rellax-speed="-0.5">
           <picture>
             <source type="image/svg+xml" srcset="img/bgi/X.svg">
             <img src="img/bgi/X.png" alt="Крестик">
           </picture>
         </div>
-        <div class="videoq-circle3 rellax mobile_hide" data-rellax-speed="-0.2">
+        <div class="videoq-circle3 rellax mobile_hide" data-rellax-speed="-0.8">
           <picture>
             <source type="image/svg+xml" srcset="img/bgi/circle3.svg">
             <img src="img/bgi/circle3.png" alt="Кружочек">
           </picture>
         </div>
-        <div class="videoq-trcir rellax mobile_hide" data-rellax-speed="-0.4">
+        <div class="videoq-trcir rellax mobile_hide" data-rellax-speed="-0.6">
           <picture>
             <source type="image/svg+xml" srcset="img/bgi/triangles-circle.svg">
             <img src="img/bgi/triangles-circle.png" alt="треугольнички кружочки">
@@ -2139,29 +2168,27 @@
             <h2>Сертификаты на квест в Москве</h2>
             <span class="mobile_hide">Сертификат может покрыть до 100% оплаты прохождения квеста.<br>Сертификат действует 365 дней с момента покупки.</span>
             <div class="cards-offer">
-                <a href="#" class="cards-var">
-                  <div class="cards-name">
-                    <i>Карта номиналом 1000 руб.</i>
-                  </div>
+                <a href="#" data-price="1000" data-toggle="modal" data-target="#modal-card" class="cards-var">
+                  <div class="cards-name"><i>Карта номиналом 1000 руб.</i></div>
                   <div class="cards-choose">Выбрать</div>
                 </a>
-              <a href="#" class="cards-var">
+              <a href="#" data-price="1500" data-toggle="modal" data-target="#modal-card" class="cards-var">
                 <div class="cards-name"><i>Карта номиналом 1500 руб.</i></div>
                 <div class="cards-choose">Выбрать</div>
               </a>
-              <a href="#" class="cards-var">
+              <a href="#" data-price="2000" data-toggle="modal" data-target="#modal-card" class="cards-var">
                 <div class="cards-name"><i>Карта номиналом 2000 руб.</i></div>
                 <div class="cards-choose">Выбрать</div>
               </a>
-              <a href="#" class="cards-var">
+              <a href="#" data-price="3000" data-toggle="modal" data-target="#modal-card" class="cards-var">
                 <div class="cards-name"><i>Карта номиналом 3000 руб.</i></div>
                 <div class="cards-choose">Выбрать</div>
               </a>
-              <a href="#" class="cards-var">
+              <a href="#" data-price="1000" data-toggle="modal" data-target="#modal-card" class="cards-var">
                 <div class="cards-name"><i>Приключения Пиратов Карибского Моря</i></div>
                 <div class="cards-choose">Выбрать</div>
               </a>
-              <a href="#" class="cards-var">
+              <a href="#" data-price="1000" data-toggle="modal" data-target="#modal-card" class="cards-var">
                 <div class="cards-name"><i>Приключения Пиратов Карибского Моря</i></div>
                 <div class="cards-choose">Выбрать</div>
               </a>
@@ -2236,8 +2263,8 @@
 
     <section class="text mobile_hide">
       <div class="container">
-        <h2>Большие квесты для большой компании</h2>
         <div class="col-sm-8 col-sm-offset-2">
+        <h2>Большие квесты для большой компании</h2>
           <p>Даже жители столицы не застрахованы от скуки. Казалось бы, огромный город, но часто сходить некуда. В кинотеатрах крутят неинтересные фильмы, в парке аттракционов уже всё перепробовано. Где же получить новые впечатления, которые останутся в памяти на очень долго?</p>
           <br>
           <p>Предлагаем вашему вниманию квест комнаты в реальности в Москве. Собирайте друзей и станьте частью захватывающего приключения!</p>
@@ -2499,6 +2526,145 @@
           </div>
         </div>
       </div>
+    <!-- Модалка выбора карты -->
+      <div class="modal fade" id="modal-card">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>Заказать карту</h4>
+            <div id="card-name" class="modal-card-chosen">Карта номиналом 1500 рублей</div>
+            <form id="form-card">
+              <div class="modal-card-inputs">
+                <p>1. Выберите способ Доставки</p>
+                <div class="modal-card-input_3">
+                  <input data-added-price="0" name="var-delivery" type="radio" value="1" id="delivery-self" checked>
+                  <label for="delivery-self">Самовывоз (+0 руб.)</label>
+                </div>
+                <div class="modal-card-input_3">
+                  <input data-added-price="0" name="var-delivery" type="radio" value="2" id="delivery-email">
+                  <label for="delivery-email">Электронный сертификат (+0 руб.) <br class="mobile_hide"><span>(будет выслан на Ваш email)</span></label>
+                </div>
+                <div class="modal-card-input_3">
+                  <input data-added-price="500" name="var-delivery" type="radio" value="3" id="delivery-mail">
+                  <label for="delivery-mail">Курьером (+ 500 руб.)</label>
+                </div>
+              </div>
+              <div class="modal-card-inputs">
+                <p>2. Выберите способ Оплаты</p>
+                <div class="modal-card-input_4">
+                  <input name="var-payment" type="radio" value="1" id="payment-card" checked>
+                  <label for="payment-card">
+                    <img src="img/payment/cards.png" alt="Visa, Mastercard">
+                  </label>
+                </div>
+                <div class="modal-card-input_4">
+                  <input name="var-payment" type="radio" value="2" id="payment-webmoney">
+                  <label for="payment-webmoney">
+                    <img src="img/payment/webmoney.png" alt="Webmoney">
+                  </label>
+                </div>
+                <div class="modal-card-input_4">
+                  <input name="var-payment" type="radio" value="3" id="payment-yandex">
+                  <label for="payment-yandex">
+                    <img src="img/payment/yandex.png" alt="Yandex Money">
+                  </label>
+                </div>
+                <div class="modal-card-input_4">
+                  <input name="var-payment" type="radio" value="4" id="payment-qiwi">
+                  <label for="payment-qiwi">
+                    <img src="img/payment/qiwi.png" alt="Qiwi">
+                  </label>
+                </div>
+              </div>
+              <div class="modal-card-footer">
+                <div class="modal-card-footer-inputs">
+                  <input name="email" type="email" placeholder="Email">
+                  <input name="phone" type="text" placeholder="Ваш номер">
+                  <input id="modal-button-card" type="submit" class="modal-button-card" value="Оплатить">
+                </div>
+                <div class="modal-card-footer-text">
+                  <div class="modal-card-personal-div">
+                    <input id="modal-card-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error2').style.display = document.getElementById('personal-error2').style.display == 'none' ? 'block' : 'none';">
+                    <label for="modal-card-personal"> Согласие на <a href="#">обработку</a> персональных данных</label>
+                  </div>
+                  <div class="modal-card-footer-sum">
+                    <div class="modal-card-footer-sum-left">
+                      Итоговая сумма:<br> <span>(без учета комиссии)</span>
+                    </div>
+                    <div class="modal-card-footer-sum-right">
+                        <span id="card-sum">1500</span><br>рублей
+                    </div>
+                  </div>
+                </div>
+                <div id="personal-error2" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <!-- Открыть новый квест -->
+      <div class="modal fade" id="modal-new">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>Размещение квеста</h4>
+            <div class="modal-text">Подать заявку на добавление Вашего квеста на QuestQuest</div>
+            <form id="form-new">
+            <input placeholder="Телефон" name="phone" type="number" id="modal-new-phone">
+            <input placeholder="Email" name="email" type="email" id="modal-new-email">
+            <input id="modal-button-phone" type="submit" class="modal-button-phone" value="Подать заявку">
+            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+            <div class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
+            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
+            </form>
+            <div class="modal-new-cloud">
+              <img src="img/bgi/clouds.svg" alt="">
+            </div>
+            <div class="modal-new-tric">
+              <img src="img/bgi/circle-triangle.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Ваш город Москва? -->
+    <div class="modal fade" id="modal-identify">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4>Ваш город - <span>Москва</span>. Верно?</h4>
+            <a data-toggle="modal" data-target="#modal-choose-region" href="#">Да, капитан!</a>
+            <a href="#">Нет</a>
+        </div>
+      </div>
+    </div>
+    <!-- Модалка выбора региона -->
+    <div class="modal fade" id="modal-choose-region">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4>Пожалуйста, выберите Ваш город из списка</h4>
+            <select placeholder="Выберите город" class="select" name="region" id="modal-choose-select">
+              <option value="moskva">Москва</option>
+              <option value="moskva">Москва</option>
+              <option value="moskva">Москва</option>
+              <option value="moskva">Москва</option>
+              <option value="moskva">Москва</option>
+              <option value="moskva">Москва</option>
+            </select>
+            <input class="modal-button-choose-region" type="submit" value="Сохранить город">
+            <a href="#">Нет в списке/ Больше не показывать</a>
+            <div class="modal-choose-region-item-1">
+              <img src="img/bgi/circle-triangle.svg" alt="">
+            </div>
+            <div class="modal-choose-region-item-2">
+              <img src="img/bgi/X.svg" alt="">
+            </div>
+            <div class="modal-choose-region-item-3">
+              <img src="img/bgi/X.svg" alt="">
+            </div>
+        </div>
+      </div>
+    </div>
     <!-- Коллапс на мобилке -->
       <div class="collapse mobile_show" id="menu_mobile">
         <div class="burger_menu">
@@ -2506,7 +2672,7 @@
             <img src="img/mobile/close.svg" alt="">
           </a>
           <ul>
-            <li><a data-toggle="modal" data-target="#region">Город</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#region">Город</a></li>
             <li><a href="#">Квесты</a></li>
             <li><a href="#">Расписание</a></li>
             <li><a href="#">Другие развлечения</a></li>

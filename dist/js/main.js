@@ -111,13 +111,47 @@ $(document).ready(function(){
   }
     });
 });
+$(document).ready(function(){
+$("#form-new").validate({
+      rules: {
+      email:{
+        required: true,
+        email: true
+      },
+      phone:{
+        required: true,
+        minlength: 7
+      }
+    },
+    messages: {
+      email:{
+        required: "Пожалуйста, введите email",
+        email: "Некорректный email"
+      },
+      phone:{
+        required: "Пожалуйста, введите номер",
+        minlength: "Введите корректный номер"
+      }
+    },
+    submitHandler: function() {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $("#form-new").serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      $("#form-new").trigger("reset");
+    });
+  }
+    });
+});
 
 $(document).ready(function(){
     $("#form-phone").validate({
       rules: {
       phone:{
         required: true,
-        minlength: 6
+        minlength: 7
       }
     },
     messages: {
@@ -179,4 +213,27 @@ $(window).resize(function(e){
   $('#region-cities').height('auto');
 }
 })
+});
+// Модалка оплаты
+$(document).ready(function(){
+  var cardSum = $('#card-sum');
+  var initialPrice = 0;
+
+  $('.cards-offer a').click(function(){
+    var price = $(this).attr('data-price');
+    var cardName = $(this).children('.cards-name').text();
+    $('#card-name').html(cardName);
+    cardSum.text(price);
+    initialPrice = price;
+  });
+
+  $('#form-card input[name="var-delivery"]').on('change', function(){
+    if ($(this).attr('data-added-price')) {
+      var newPrice = +initialPrice + +$(this).attr('data-added-price');
+      cardSum.text(newPrice);
+    } else {
+      cardSum.text(initialPrice);
+    }
+  });
+
 });

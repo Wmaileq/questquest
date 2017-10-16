@@ -14,10 +14,10 @@
 		text-align: center
 	&-truncate
 		position: absolute
-		background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,1))
+		background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,1))
 		bottom: 0
 		left: 0
-		height: 5rem
+		height: 7.5rem
 		width: 100%
 		z-index: 100
 	&-otziv
@@ -113,6 +113,8 @@
 @media (max-width: 767px)
 	.feed
 		margin-top: 2rem
+		&-truncate
+			height: 5rem
 		&-height
 			height: auto
 		h2
