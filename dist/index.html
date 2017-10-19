@@ -113,7 +113,7 @@
 					<li><a href="#">Расписание</a></li>           
 					<li><a href="#">Отзывы</a></li>
 					<li class="nav_hide"><a href="#">Подарочные карты</a></li>
-					<li class="nav_hide"><a data-toggle="modal" data-target="#modal-new" href="#">Открыть квест</a></li>
+					<li class="nav_hide"><a data-toggle="modal" data-target="#modal-open" href="#">Открыть квест</a></li>
 					<li><a href="#">Блог</a></li>
 					<li class="nav_show"><a href="#">Видео</a></li>
 					<li class="nav_hide"><a href="#">Контакты</a></li>
@@ -2504,7 +2504,7 @@
             <div class="modal-text">Мы уже отправили письмо, осталось всего-лишь подтвердить почту.</div>
             <br>
             <div class="modal-text">Кстати, присоединяйся к нам во Вконтакте :)</div>
-            <a class="modal-button-vk" href="https://vk.com/questmoskva" target="_blank">Присоединиться в ВК</a>
+            <a class="modal-button-submit" href="https://vk.com/questmoskva" target="_blank">Присоединиться в ВК</a>
           </div>
         </div>
       </div>
@@ -2517,8 +2517,8 @@
             <div class="modal-text">Оставьте свой контактный номер телефона.<br>Наши операторы свяжутся с Вами и помогут выбрать приключение!</div>
             <br>
             <form id="form-phone">
-            <div class="modal-phone-tel"><input name="phone" type="number" id="phone-modal"></div>
-            <input id="modal-button-phone" type="submit" class="modal-button-phone" value="Заказать обратный звонок">
+            <div class="modal-phone-tel"><input name="phone" type="tel" id="phone-modal"></div>
+            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Заказать обратный звонок">
             <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
             <div class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
             <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
@@ -2580,7 +2580,7 @@
                 <div class="modal-card-footer-inputs">
                   <input name="email" type="email" placeholder="Email">
                   <input name="phone" type="text" placeholder="Ваш номер">
-                  <input id="modal-button-card" type="submit" class="modal-button-card" value="Оплатить">
+                  <input id="modal-button-card" type="submit" class="modal-button-submit" value="Оплатить">
                 </div>
                 <div class="modal-card-footer-text">
                   <div class="modal-card-personal-div">
@@ -2603,24 +2603,24 @@
         </div>
       </div>
     <!-- Открыть новый квест -->
-      <div class="modal fade" id="modal-new">
+      <div class="modal fade" id="modal-open">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4>Размещение квеста</h4>
             <div class="modal-text">Подать заявку на добавление Вашего квеста на QuestQuest</div>
-            <form id="form-new">
-            <input placeholder="Телефон" name="phone" type="number" id="modal-new-phone">
-            <input placeholder="Email" name="email" type="email" id="modal-new-email">
-            <input id="modal-button-phone" type="submit" class="modal-button-phone" value="Подать заявку">
+            <form id="form-open">
+            <input placeholder="Телефон" name="phone" type="tel" id="modal-open-phone">
+            <input placeholder="Email" name="email" type="email" id="modal-open-email">
+            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Подать заявку">
             <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
             <div class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
             <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
             </form>
-            <div class="modal-new-cloud">
+            <div class="modal-open-cloud">
               <img src="img/bgi/clouds.svg" alt="">
             </div>
-            <div class="modal-new-tric">
+            <div class="modal-open-tric">
               <img src="img/bgi/circle-triangle.svg" alt="">
             </div>
           </div>
@@ -2651,7 +2651,7 @@
               <option value="moskva">Москва</option>
               <option value="moskva">Москва</option>
             </select>
-            <input class="modal-button-choose-region" type="submit" value="Сохранить город">
+            <input class="modal-button-submit" type="submit" value="Сохранить город">
             <a href="#">Нет в списке/ Больше не показывать</a>
             <div class="modal-choose-region-item-1">
               <img src="img/bgi/circle-triangle.svg" alt="">
@@ -2665,6 +2665,33 @@
         </div>
       </div>
     </div>
+    <!-- МОдалка скидки -->
+    <div class="modal fade" id="modal-discount">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>Постойте! Для вас скидка!</h4>
+            <p>Оставьте Ваш телефон сейчас и получите <span>скидку 100 руб.!</span></p>
+            <div class="modal-text">Мы редко предлагаем подобные вещи, это крупная удача.</div>
+            <form id="form-open">
+	            <input placeholder="Телефон" name="phone" type="tel" id="modal-open-phone">
+	            <input placeholder="Email" name="email" type="email" id="modal-open-email">
+	            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Подать заявку">
+	            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+	            <div name="modal-phone-presonal" class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
+	            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a><br> персональных данных</label></div>
+	            <p class="modal-discount-thanks"><a href="#">Спасибо, но я не хочу получить скидку на квест.</a></p>
+            </form>
+            <div class="modal-open-cloud">
+              <img src="img/bgi/clouds.svg" alt="">
+            </div>
+            <div class="modal-open-tric">
+              <img src="img/bgi/circle-triangle.svg" alt="">
+            </div>
+            <img class="modal-discount-img mobile_hide" src="img/cat_s/entertaiments.svg" alt="Хухра">
+          </div>
+        </div>
+      </div>
     <!-- Коллапс на мобилке -->
       <div class="collapse mobile_show" id="menu_mobile">
         <div class="burger_menu">

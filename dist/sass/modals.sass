@@ -7,7 +7,7 @@
 	text-align: center
 	padding: 1rem
 	margin-bottom: 1rem
-#modal-subscribe, #modal-phone, #region, #modal-card, #modal-new, #modal-identify, #modal-choose-region
+.modal
 	h4
 		color: #333
 		font-size: 2.2rem
@@ -23,7 +23,7 @@
 		right: 2rem
 		outline: none
 		z-index: 400
-.modal-button-vk, .modal-button-phone, .modal-button-card, .modal-button-choose-region
+.modal-button-submit
 	display: block
 	margin: 0 auto
 	width: 22.5rem
@@ -49,7 +49,7 @@
 		background-color: #ff3f3f
 .modal-button-vk
 	margin-bottom: 4rem
-#modal-phone, #modal-new
+#modal-phone, #modal-open, #modal-discount
 	.modal-dialog
 		width: 54.5rem
 	h4
@@ -58,7 +58,7 @@
 		margin-bottom: 3rem
 	.modal-text
 		width: 38.5rem
-		margin-left: 9rem
+		margin: 0 auto
 		text-align: center
 		font-size: 1.6rem
 		color: #333
@@ -286,7 +286,7 @@
 			margin-left: 0.5rem
 			span
 				font-size: 2.5rem
-#modal-new
+#modal-open
 	.modal-dialog
 		width: 48.5rem
 	h4
@@ -314,6 +314,7 @@
 			border-color: #7cc576
 		&[type=submit]
 			margin-top: 2.2rem
+			border: 0
 		&[type=checkbox]
 			height: auto
 			width: auto
@@ -327,6 +328,8 @@
 #modal-phone
 	.modal-text
 		margin-bottom: 2rem
+	.modal-button-submit
+		width: 26rem
 .modal-changeable
 	text-align: center
 	font-size: 1.6rem
@@ -412,16 +415,16 @@
 		width: 2rem
 		height: 2rem
 		transform: rotate(-15deg)
-.modal-new-cloud
+.modal-open-cloud
 	position: absolute
 	top: 2rem
 	left: 4rem
 	opacity: 0.3
-	z-index: 0
+	z-index: -1
 	img
 		width: 24.8rem
 		height: 9.8rem
-.modal-new-tric
+.modal-open-tric
 	position: absolute
 	bottom: 6rem
 	right: 2rem
@@ -429,6 +432,57 @@
 	img
 		width: 3.1rem
 		height: 2.2rem
+#modal-discount
+	p
+		text-align: center
+		font-size: 1.6rem
+		margin-bottom: 1rem
+		span
+			color: #f05a29
+	.modal-dialog
+		width: 60.3rem
+		overflow: hidden
+	.modal-text
+		width: 32rem
+	input
+		width: 19rem
+		height: 4.1rem
+		border-radius: 0.5rem
+		border: 1px solid #959595
+		line-height: 4.1rem
+		display: block
+		margin-top: 1.1rem
+		padding-left: 2rem
+		&[type="checkbox"]
+			width: auto
+			height: auto
+			display: inline-block
+		&[type="submit"]
+			border: 0
+	.modal-phone-personal-div
+		margin-left: 0
+	#form-open
+		margin-left: 31rem
+	.modal-discount-thanks
+		a
+			color: #f05a29
+		font-size: 1.8rem
+		width: 25.8rem
+		text-align: left
+		margin-left: 0
+		margin-bottom: 4.5rem
+		font-size: 1.4rem
+	.modal-discount-img
+		position: absolute
+		left: -2rem
+		bottom: 2rem
+		width: 28.1rem
+	.modal-button-submit
+		margin: 2rem 0 0 0
+	label
+		width: 25rem
+	.modal-open-tric
+		bottom: 12rem
 @media (max-width: 479px)
 	#region
 		.modal-dialog
@@ -461,6 +515,23 @@
 				color: #f05a29
 				text-align: left
 @media (max-width: 767px)
+	#modal-discount
+		.modal-dialog
+			width: calc(100% - 2rem)
+		h4
+			width: auto
+			margin-left: auto
+			font-size: 2rem
+			margin-top: 5rem
+		#form-open
+			margin-left: 0
+			text-align: center
+		.modal-text
+			width: auto
+		input
+			display: inline-block
+		.modal-discount-thanks
+			text-align: center
 	#modal-phone 
 		.modal-dialog
 			width: auto
@@ -542,18 +613,19 @@
 			display: block
 			text-align: center
 			margin-left: 0
-	#modal-new
+	#modal-open
 		.modal-dialog
 			width: 100%
 		.modal-content
 			padding-left: 1rem
 			padding-right: 1rem
+			z-index: -1
 		.modal-text
 			width: 100%
 		.modal-phone-personal-div
 			width: 100%
 			margin-left: 1rem
-		.modal-new-tric
+		.modal-open-tric
 			bottom: 2rem
 		h4
 			margin-top: 5rem
