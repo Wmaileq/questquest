@@ -2498,6 +2498,7 @@
     <!-- Модалка подписки -->
       <div class="modal fade" id="modal-subscribe">
         <div class="modal-dialog" role="document">
+          <div class="modal-changeable"></div>
           <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4>Хочу получать спецпредложения и скидки первым!</h4>
@@ -2511,6 +2512,7 @@
     <!-- Модалка обратного звонка -->
       <div class="modal fade" id="modal-phone">
         <div class="modal-dialog" role="document">
+          <div class="modal-changeable"></div>
           <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4>Твое приключение в 1 клик</h4>
@@ -2605,6 +2607,7 @@
     <!-- Открыть новый квест -->
       <div class="modal fade" id="modal-open">
         <div class="modal-dialog" role="document">
+          <div class="modal-changeable"></div>
           <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4>Размещение квеста</h4>
@@ -2665,17 +2668,17 @@
         </div>
       </div>
     </div>
-    <!-- МОдалка скидки -->
-    <div class="modal fade" id="modal-discount">
+    <!-- Модалка скидки -->
+      <div class="modal fade" id="modal-discount">
         <div class="modal-dialog" role="document">
+          <div class="modal-changeable"></div>
           <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4>Постойте! Для вас скидка!</h4>
             <p>Оставьте Ваш телефон сейчас и получите <span>скидку 100 руб.!</span></p>
             <div class="modal-text">Мы редко предлагаем подобные вещи, это крупная удача.</div>
             <form id="form-open">
-	            <input placeholder="Телефон" name="phone" type="tel" id="modal-open-phone">
-	            <input placeholder="Email" name="email" type="email" id="modal-open-email">
+	            <input placeholder="Телефон" name="phone" type="tel" id="modal-discount-phone">
 	            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Подать заявку">
 	            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
 	            <div name="modal-phone-presonal" class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
@@ -2692,6 +2695,26 @@
           </div>
         </div>
       </div>
+    <!-- Модалка скидки этап второй -->
+      <div class="modal fade" id="modal-discount-second">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4>Но мы же...</h4>
+            <img class="modal-discount-second-image" src="img/discount.jpg" alt="Мем про скидку">
+            <div class="modal-text">предложили скидку...</div>
+            <a class="modal-button-submit" href="#">Получить скидку</a>
+            <p class="modal-discount-thanks"><a href="#">Спасибо, но я не хочу получить скидку на квест.</a></p>
+            <div class="modal-open-cloud">
+              <img src="img/bgi/clouds.svg" alt="">
+            </div>
+            <div class="modal-open-tric">
+              <img src="img/bgi/circle-triangle.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Коллапс на мобилке -->
       <div class="collapse mobile_show" id="menu_mobile">
         <div class="burger_menu">
