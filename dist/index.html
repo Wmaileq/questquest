@@ -2423,8 +2423,8 @@
     <!-- Модалка региона -->
       <div class="modal fade" id="region">
         <div class="modal-dialog" role="document">
+	    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4>Выбрать город</h4>
             <div id="region-cities" class="region-cities">
               <a href="#"><span>АНижний Новгород</span></a>
@@ -2498,9 +2498,8 @@
     <!-- Модалка подписки -->
       <div class="modal fade" id="modal-subscribe">
         <div class="modal-dialog" role="document">
-          <div class="modal-changeable"></div>
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="modal-content">            
             <h4>Хочу получать спецпредложения и скидки первым!</h4>
             <div class="modal-text">Мы уже отправили письмо, осталось всего-лишь подтвердить почту.</div>
             <br>
@@ -2512,9 +2511,8 @@
     <!-- Модалка обратного звонка -->
       <div class="modal fade" id="modal-phone">
         <div class="modal-dialog" role="document">
-          <div class="modal-changeable"></div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4>Твое приключение в 1 клик</h4>
             <div class="modal-text">Оставьте свой контактный номер телефона.<br>Наши операторы свяжутся с Вами и помогут выбрать приключение!</div>
             <br>
@@ -2531,8 +2529,9 @@
     <!-- Модалка выбора карты -->
       <div class="modal fade" id="modal-card">
         <div class="modal-dialog" role="document">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            
             <h4>Заказать карту</h4>
             <div id="card-name" class="modal-card-chosen">Карта номиналом 1500 рублей</div>
             <form id="form-card">
@@ -2607,9 +2606,9 @@
     <!-- Открыть новый квест -->
       <div class="modal fade" id="modal-open">
         <div class="modal-dialog" role="document">
-          <div class="modal-changeable"></div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            
             <h4>Размещение квеста</h4>
             <div class="modal-text">Подать заявку на добавление Вашего квеста на QuestQuest</div>
             <form id="form-open">
@@ -2632,8 +2631,9 @@
     <!-- Ваш город Москва? -->
     <div class="modal fade" id="modal-identify">
       <div class="modal-dialog" role="document">
+      	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          
           <h4>Ваш город - <span>Москва</span>. Верно?</h4>
             <a data-toggle="modal" data-target="#modal-choose-region" href="#">Да, капитан!</a>
             <a href="#">Нет</a>
@@ -2643,8 +2643,9 @@
     <!-- Модалка выбора региона -->
     <div class="modal fade" id="modal-choose-region">
       <div class="modal-dialog" role="document">
+      	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          
           <h4>Пожалуйста, выберите Ваш город из списка</h4>
             <select placeholder="Выберите город" class="select" name="region" id="modal-choose-select">
               <option value="moskva">Москва</option>
@@ -2671,46 +2672,41 @@
     <!-- Модалка скидки -->
       <div class="modal fade" id="modal-discount">
         <div class="modal-dialog" role="document">
-          <div class="modal-changeable"></div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4>Постойте! Для вас скидка!</h4>
-            <p>Оставьте Ваш телефон сейчас и получите <span>скидку 100 руб.!</span></p>
-            <div class="modal-text">Мы редко предлагаем подобные вещи, это крупная удача.</div>
-            <form id="form-open">
-	            <input placeholder="Телефон" name="phone" type="tel" id="modal-discount-phone">
-	            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Подать заявку">
-	            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
-	            <div name="modal-phone-presonal" class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
-	            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a><br> персональных данных</label></div>
+            <div class="modal-discount-first-step">
+	            <h4>Постойте! Для вас скидка!</h4>
+	            <p>Оставьте Ваш телефон сейчас и получите <span>скидку 100 руб.!</span></p>
+	            <div class="modal-text">Мы редко предлагаем подобные вещи, это крупная удача.</div>
+	            <form id="form-open">
+		            <input placeholder="Телефон" name="phone" type="tel" id="modal-discount-phone">
+		            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Подать заявку">
+		            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+		            <div name="modal-phone-presonal" class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
+		            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a><br> персональных данных</label></div>
+		            <p class="modal-discount-thanks"><a href="#">Спасибо, но я не хочу получить скидку на квест.</a></p>
+	            </form>
+	            <div class="modal-open-cloud">
+	              <img src="img/bgi/clouds.svg" alt="">
+	            </div>
+	            <div class="modal-open-tric">
+	              <img src="img/bgi/circle-triangle.svg" alt="">
+	            </div>
+	            <img class="modal-discount-img mobile_hide" src="img/cat_s/entertaiments.svg" alt="Хухра">
+            </div>
+            <div class="modal-discount-second-step">
+	            <h4>Но мы же...</h4>
+	            <img class="modal-discount-second-image" src="img/discount.jpg" alt="Мем про скидку">
+	            <div class="modal-text">предложили скидку...</div>
+	            <a class="modal-button-submit" href="#">Получить скидку</a>
 	            <p class="modal-discount-thanks"><a href="#">Спасибо, но я не хочу получить скидку на квест.</a></p>
-            </form>
-            <div class="modal-open-cloud">
-              <img src="img/bgi/clouds.svg" alt="">
-            </div>
-            <div class="modal-open-tric">
-              <img src="img/bgi/circle-triangle.svg" alt="">
-            </div>
-            <img class="modal-discount-img mobile_hide" src="img/cat_s/entertaiments.svg" alt="Хухра">
-          </div>
-        </div>
-      </div>
-    <!-- Модалка скидки этап второй -->
-      <div class="modal fade" id="modal-discount-second">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4>Но мы же...</h4>
-            <img class="modal-discount-second-image" src="img/discount.jpg" alt="Мем про скидку">
-            <div class="modal-text">предложили скидку...</div>
-            <a class="modal-button-submit" href="#">Получить скидку</a>
-            <p class="modal-discount-thanks"><a href="#">Спасибо, но я не хочу получить скидку на квест.</a></p>
-            <div class="modal-open-cloud">
-              <img src="img/bgi/clouds.svg" alt="">
-            </div>
-            <div class="modal-open-tric">
-              <img src="img/bgi/circle-triangle.svg" alt="">
-            </div>
+	            <div class="modal-open-cloud">
+	              <img src="img/bgi/clouds.svg" alt="">
+	            </div>
+	            <div class="modal-open-tric">
+	              <img src="img/bgi/circle-triangle.svg" alt="">
+	            </div>
+            </div>  
           </div>
         </div>
       </div>
