@@ -2498,7 +2498,9 @@
     <!-- Модалка подписки -->
       <div class="modal fade" id="modal-subscribe">
         <div class="modal-dialog" role="document">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          	<span aria-hidden="true">&times;</span>
+          </button>
           <div class="modal-content">            
             <h4>Хочу получать спецпредложения и скидки первым!</h4>
             <div class="modal-text">Мы уже отправили письмо, осталось всего-лишь подтвердить почту.</div>
@@ -2508,6 +2510,7 @@
           </div>
         </div>
       </div>
+
     <!-- Модалка обратного звонка -->
       <div class="modal fade" id="modal-phone">
         <div class="modal-dialog" role="document">
@@ -2518,10 +2521,11 @@
             <br>
             <form id="form-phone">
             <div class="modal-phone-tel"><input name="phone" type="tel" id="phone-modal"></div>
-            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Заказать обратный звонок">
-            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
-            <div class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
-            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
+            <input id="modal-phone-button" type="submit" class="modal-button-submit" value="Заказать обратный звонок">
+            <div id="personal-phone-error" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+            <div class="modal-phone-personal-div">
+            	<input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-phone-button').disabled = !this.checked;document.getElementById('personal-phone-error').style.display = document.getElementById('personal-phone-error').style.display == 'none' ? 'block' : 'none';">
+	            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
             </form>
           </div>
         </div>
@@ -2531,7 +2535,6 @@
         <div class="modal-dialog" role="document">
         	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-content">
-            
             <h4>Заказать карту</h4>
             <div id="card-name" class="modal-card-chosen">Карта номиналом 1500 рублей</div>
             <form id="form-card">
@@ -2581,11 +2584,11 @@
                 <div class="modal-card-footer-inputs">
                   <input name="email" type="email" placeholder="Email">
                   <input name="phone" type="text" placeholder="Ваш номер">
-                  <input id="modal-button-card" type="submit" class="modal-button-submit" value="Оплатить">
+                  <input id="modal-card-button" type="submit" class="modal-button-submit" value="Оплатить">
                 </div>
                 <div class="modal-card-footer-text">
                   <div class="modal-card-personal-div">
-                    <input id="modal-card-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error2').style.display = document.getElementById('personal-error2').style.display == 'none' ? 'block' : 'none';">
+                    <input id="modal-card-personal" checked type="checkbox" onchange="document.getElementById('modal-card-button').disabled = !this.checked;document.getElementById('personal-card-error').style.display = document.getElementById('personal-card-error').style.display == 'none' ? 'block' : 'none';">
                     <label for="modal-card-personal"> Согласие на <a href="#">обработку</a> персональных данных</label>
                   </div>
                   <div class="modal-card-footer-sum">
@@ -2597,7 +2600,7 @@
                     </div>
                   </div>
                 </div>
-                <div id="personal-error2" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+                <div id="personal-card-error" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
               </div>
             </form>
           </div>
@@ -2608,16 +2611,17 @@
         <div class="modal-dialog" role="document">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-content">
-            
             <h4>Размещение квеста</h4>
             <div class="modal-text">Подать заявку на добавление Вашего квеста на QuestQuest</div>
             <form id="form-open">
             <input placeholder="Телефон" name="phone" type="tel" id="modal-open-phone">
             <input placeholder="Email" name="email" type="email" id="modal-open-email">
-            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Подать заявку">
-            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
-            <div class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
-            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
+            <input id="modal-open-button" type="submit" class="modal-button-submit" value="Подать заявку">
+            <div id="personal-open-error" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+            <div class="modal-phone-personal-div">
+            	<input id="modal-open-personal" checked type="checkbox" onchange="document.getElementById('modal-open-button').disabled = !this.checked;document.getElementById('personal-open-error').style.display = document.getElementById('personal-open-error').style.display == 'none' ? 'block' : 'none';"> 
+	            <label for="modal-open-personal">Согласие на <a href="#">обработку</a> персональных данных</label>
+	        </div>
             </form>
             <div class="modal-open-cloud">
               <img src="img/bgi/clouds.svg" alt="">
@@ -2680,10 +2684,11 @@
 	            <div class="modal-text">Мы редко предлагаем подобные вещи, это крупная удача.</div>
 	            <form id="form-open">
 		            <input placeholder="Телефон" name="phone" type="tel" id="modal-discount-phone">
-		            <input id="modal-button-phone" type="submit" class="modal-button-submit" value="Подать заявку">
-		            <div id="personal-error1" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
-		            <div name="modal-phone-presonal" class="modal-phone-personal-div"><input id="modal-phone-personal" checked type="checkbox" onchange="document.getElementById('modal-button-phone').disabled = !this.checked;document.getElementById('personal-error1').style.display = document.getElementById('personal-error1').style.display == 'none' ? 'block' : 'none';"> 
-		            <label for="modal-phone-personal">Согласие на <a href="#">обработку</a><br> персональных данных</label></div>
+		            <input id="modal-discount-button" type="submit" class="modal-button-submit" value="Подать заявку">
+		            <div id="personal-discount-error" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
+		            <div class="modal-phone-personal-div">
+		            	<input id="modal-discount-personal" checked type="checkbox" onchange="document.getElementById('modal-discount-button').disabled = !this.checked;document.getElementById('personal-discount-error').style.display = document.getElementById('personal-discount-error').style.display == 'none' ? 'block' : 'none';"> 
+		            <label for="modal-discount-personal">Согласие на <a href="#">обработку</a><br> персональных данных</label></div>
 		            <p class="modal-discount-thanks"><a href="#">Спасибо, но я не хочу получить скидку на квест.</a></p>
 	            </form>
 	            <div class="modal-open-cloud">

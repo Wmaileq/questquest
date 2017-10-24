@@ -7,6 +7,10 @@
 	text-align: center
 	padding: 1rem
 	margin-bottom: 1rem
+	margin-top: 1rem
+	&#personal-discount-error
+		width: 90%
+		margin-left: 0
 .modal
 	h4
 		color: #333
@@ -40,6 +44,7 @@
 	position: relative
 	z-index: 200
 	border: 0
+	padding-left: 0!important
 	&:hover, &:focus
 		color: #FFF
 		text-decoration: none
@@ -468,14 +473,13 @@
 	#form-open
 		margin-left: 31rem
 	.modal-discount-thanks
-		a
-			color: #f05a29
-		font-size: 1.8rem
 		width: 25.8rem
 		text-align: left
 		margin-left: 0
 		margin-bottom: 4.5rem
 		font-size: 1.4rem
+		a
+			color: #f05a29
 	.modal-discount-img
 		position: absolute
 		left: -2rem
@@ -685,6 +689,22 @@
 		.modal-discount-second-step
 			.modal-discount-second-image
 				width: 90%
+	.personal-error
+		&#personal-discount-error
+			width: 90%
+			margin: 1rem auto
+	#modal-subscribe
+		.modal-dialog
+			width: 100%
+		h4
+			width: 100%
+			margin: 4rem auto 2rem auto
+		.modal-text:nth-of-type(1)
+			width: calc(100% - 2rem)
+			margin: 0 auto
+		.modal-text:nth-of-type(2)
+			width: calc(100% - 2rem)
+			margin: 0 auto 2rem auto
 @media (max-width: 360px)
 	#region
 		.region-countries
