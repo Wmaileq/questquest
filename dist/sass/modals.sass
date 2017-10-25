@@ -1,23 +1,7 @@
-.personal-error
-	color: red
-	margin: 0 auto
-	width: 70%
-	border: 1px solid rgba(255,0,0,0.3)
-	background-color: rgba(255,0,0,0.2)
-	text-align: center
-	padding: 1rem
-	margin-bottom: 1rem
-	margin-top: 1rem
-	&#personal-discount-error
-		width: 90%
-		margin-left: 0
 .modal
-	h4
-		color: #333
-		font-size: 2.2rem
-		font-weight: 700
-		text-align: center
-		margin-top: 3.6rem
+	padding: 0!important
+	.modal-dialog
+		width: 48.5rem
 	.close
 		border: 0
 		background-color: transparent
@@ -27,82 +11,187 @@
 		right: 2rem
 		outline: none
 		z-index: 400
-.modal-button-submit
-	display: block
-	margin: 0 auto
-	width: 22.5rem
-	height: 5rem
-	border-radius: 0.5rem
-	line-height: 5rem
-	font-size: 1.7rem
-	color: #FFF
-	background-color: #ff3f3f
-	text-align: center
-	text-decoration: none
-	transition: 0.2s all
-	margin-bottom: 2rem
-	position: relative
-	z-index: 200
-	border: 0
-	padding-left: 0!important
-	&:hover, &:focus
-		color: #FFF
-		text-decoration: none
-	&:hover
-		background-color: #ff624d
-	&:focus
-		background-color: #ff3f3f
-.modal-button-vk
-	margin-bottom: 4rem
-#modal-phone, #modal-open, #modal-discount
-	.modal-dialog
-		width: 54.5rem
+	.modal-content
+		padding: 4rem 4.75rem
 	h4
-		margin-left: 11rem
-		width: 32.5rem
-		margin-bottom: 3rem
+		color: #333
+		font-size: 2.2rem
+		font-weight: 700
+		text-align: center
+		margin: 0rem auto 2rem auto
+		position: relative
+		z-index: 100
+	input
+		position: relative
+		z-index: 100
+		border-radius: 0.5rem
+		display: block
+		margin: 1rem auto
+		width: 25.9rem
+		height: 4.7rem
+		line-height: 4.7rem
+		border-radius: 0.5rem
+		border: 1px solid #959595
+		font-size: 1.6rem
+		&[type="tel"], &[type="text"], &[type="email"]
+			padding-left: 2rem
+		&:hover,&:focus
+			border-color: #7cc576
+		&[type="submit"]
+			margin-top: 1.8rem
+			border: 0
+			background-color: #ff3f3f
+			color: #fff
+			&:disabled
+				cursor: not-allowed
+			&:hover, &:focus
+				color: #FFF
+				text-decoration: none
+			&:hover
+				background-color: #ff624d
+			&:focus
+				background-color: #ff3f3f
+		&[type="checkbox"], &[type="radio"]
+			height: auto
+			width: auto
+			display: inline-block
+			margin: 0
+		&.error
+			border-color: red
+	label.error
+		display: block
+		color: red
+		text-align: center
+	.personal-error
+		color: red
+		margin: 1rem auto
+		width: 25.9rem
+		border: 1px solid rgba(255,0,0,0.3)
+		background-color: rgba(255,0,0,0.2)
+		text-align: center
+		padding: 1rem
+		display: none
 	.modal-text
-		width: 38.5rem
-		margin: 0 auto
+		margin: 3rem auto
 		text-align: center
 		font-size: 1.6rem
 		color: #333
-		margin-bottom: 3rem
-	.modal-button-phone:disabled
-		cursor: not-allowed
-	.modal-button-phone
+		position: relative
+		z-index: 100
+	.modal-personal-div
 		width: 26rem
-		outline: none
-		border: 0
-	.modal-phone-personal-div
-		width: 28.5rem
-		margin-left: 14.2rem
-		margin-bottom: 4rem
 		font-weight: 300
 		font-size: 1.4rem
 		letter-spacing: -0.7px
-		label
-			a
-				color: #333
-				border-bottom: 1px dashed #333
-				&:hover
-					text-decoration: none
-	#modal-phone-personal
-		font-size: 1.5rem
-		outline: none
-	.modal-phone-tel
 		margin: 0 auto
-		margin-bottom: 1.7rem
-		width: 26rem
-#phone-modal
-	margin: 0 auto
-	display: block
-	height: 4.2rem
-	border-radius: 0.5rem
-	border: 1px solid #959595
-	outline: none
-	width: 26rem
+		a
+			color: #333
+			border-bottom: 1px dashed #333
+			transition: all 0.2s
+			&:hover
+				border-bottom: 1px dashed transparent
+	.modal-link_button
+		border-radius: 0.5rem
+		display: block
+		margin: 1.8rem auto 1rem auto
+		border: 0
+		width: 25.9rem
+		height: 4.7rem
+		line-height: 4.7rem
+		background-color: #ff3f3f
+		color: #fff
+		text-align: center
+		font-size: 1.6rem
+		position: relative
+		z-index: 100
+		transition: all 0.2s
+		&:hover
+			background-color: #ff624d
+#modal-phone
+	.modal-dialog
+		width: 54.3rem
+	.modal-text
+		width: 37.5rem
+#modal-open
+	.modal-text
+		width: 31rem
+	.modal-open-cloud
+		position: absolute
+		top: 2rem
+		left: 4rem
+		opacity: 0.3
+		z-index: 0
+		img
+			width: 24.8rem
+			height: 9.8rem
+	.modal-open-tric
+		position: absolute
+		bottom: 6rem
+		right: 2rem
+		z-index: 0
+		img
+			width: 3.1rem
+			height: 2.2rem
+#modal-identify
+	.modal-dialog
+		width: 41.3rem
+	.modal-link_button
+		display: inline-block
+		padding: 0 2.5rem
+		width: auto
+		&:nth-of-type(1)
+			margin-right: 4rem
+			margin-left: 1.5rem
+#modal-choose-region
+	.modal-dialog
+		width: 42.6rem
+	.modal-content
+		text-align: center
+	select
+		width: 25.9rem
+		height: 4.7rem
+		display: block
+		margin: 6rem auto 2rem auto
+		position: relative
+		border-radius: 0.5rem
+		padding-left: 2rem
+		-webkit-appearance: none;
+		background-image: url('../img/arrow_down.png')
+		background-position: right center
+		background-repeat: no-repeat
+		line-height: 4.7rem
+		-moz-appearance: none
+		text-indent: 0.01px
+		text-overflow: ''
+		appearance: none!important
+	a
+		color: #f05a29
+		text-align: center
+		border-bottom: 1px dashed #f05a29
+		font-size: 1.5rem
+	.modal-choose-region-item-1
+		position: absolute
+		right: 2rem
+		bottom: 7rem
+	.modal-choose-region-item-2
+		position: absolute
+		right: 7rem
+		top: 10rem
+		img
+			width: 2rem
+			height: 2rem
+			transform: rotate(15deg)
+	.modal-choose-region-item-3
+		position: absolute
+		left: 2rem
+		top: 4.4rem
+		img
+			width: 2rem
+			height: 2rem
+			transform: rotate(-15deg)
 #modal-subscribe
+	h4
+		margin-bottom: 0.5rem
 	.modal-dialog
 		width: 48.5rem
 		&:after
@@ -112,24 +201,15 @@
 			background: url(../img/bgi/circle-triangle.svg) center center no-repeat
 			background-size: cover
 			bottom: 5.5rem
-			right: 10rem
+			right: 8.5rem
 			position: absolute
-			z-index: 100
+			z-index: 0
 	.modal-text
-		font-size: 1.6rem
-		color: #333
-		text-align: center
 		&:nth-of-type(1)
 			width: 31rem
-			margin-left: 9rem
+			margin-top: 0
 		&:nth-of-type(2)
 			width: 38rem
-			margin-left: 5rem
-			margin-bottom: 4rem
-	h4
-		width: 39rem
-		margin-left: 5rem
-		margin-bottom: 1.5rem
 #region
 	h4
 		text-align: center
@@ -137,8 +217,6 @@
 		margin-bottom: 4rem
 	.modal-dialog
 		width: 120rem
-	.modal-content
-		padding: 2rem
 	.region-cities
 		display: -webkit-flex
 		display: -moz-flex
@@ -183,10 +261,6 @@
 #modal-card
 	.modal-dialog
 		width: 74.3rem
-	.modal-content
-		padding: 3rem 5rem
-		h4
-			margin-top: 0
 		p
 			font-size: 1.4rem
 			font-weight: 300
@@ -200,7 +274,7 @@
 		position: relative
 		padding-bottom: 2rem
 		padding-top: 2rem
-		height: 13.5rem
+		height: 14.5rem
 		p
 			margin-bottom: 1.5rem
 		&:after
@@ -239,24 +313,17 @@
 		&:nth-of-type(4) img
 			height: 3.9rem
 	.modal-card-footer
-		height: 18rem
+		height: 14rem
 	.modal-card-footer-inputs
 		font-size: 0
 		input
 			width: 18rem
-			height: 4rem
 			display: inline-block
 			vertical-align: top
 			margin: 3.3rem 0.75rem 0 0.75rem
 			border-radius: 0.5rem
-			border: 1px solid #959595
-			font-size: 1.4rem
 			font-weight: 300
-			padding-left: 1.5rem
-			line-height: 4rem
 			&[type=submit]
-				border: 0
-				padding-left: 0
 				font-size: 1.6rem
 				font-weight: 400
 				width: 21.7rem
@@ -291,206 +358,51 @@
 			margin-left: 0.5rem
 			span
 				font-size: 2.5rem
-#modal-open
-	.modal-dialog
-		width: 48.5rem
-	h4
-		margin: 0 auto
-		margin-top: 3.5rem
-		width: 23rem
-	.modal-text
-		margin: 0 auto
-		width: 31rem
-		margin-top: 3rem
-		margin-bottom: 3rem
-	.modal-phone-personal-div
-		margin-left: 11.2rem
-	input
-		width: 25.9rem
-		height: 4.1rem
-		border-radius: 0.5rem
-		border: 1px solid #959595
-		margin: 0 auto
-		line-height: 4.1rem
-		display: block
-		margin-top: 1.1rem
-		padding-left: 2rem
-		&:hover,&:focus
-			border-color: #7cc576
-		&[type=submit]
-			margin-top: 2.2rem
-			border: 0
-		&[type=checkbox]
-			height: auto
-			width: auto
-			display: inline-block
-	input.error
-		border-color: red
-	label.error
-		display: block
-		color: red
-		text-align: center
-#modal-phone
-	.modal-text
-		margin-bottom: 2rem
-	.modal-button-submit
-		width: 26rem
-.modal-changeable
-	text-align: center
-	font-size: 1.6rem
-	padding: 2rem
-	color: #333
-#modal-identify
-	.modal-dialog
-		width: 41.3rem
-	.modal-content
-		padding: 4rem 5rem
-	h4
-		color: #333
-		font-size: 2.2rem
-		font-weight: 700
-		text-align: center
-	a
-		display: inline-block
-		padding: 1.3rem 2.5rem
-		height: 4.7rem
-		color: #fff
-		text-align: center
-		background-color: #ff3f3f
-		transition: all 0.2s
-		border-radius: 0.5rem
-		font-size: 1.6rem
-		margin-top: 3.5rem
-		&:nth-of-type(1)
-			margin-right: 4rem
-			margin-left: 1.5rem
-		&:hover
-			background-color: #f55b2b
-#modal-choose-region
-	.modal-dialog
-		width: 42.6rem
-	.modal-content
-		padding: 2rem 5rem 6rem 5rem
-		text-align: center
-	select
-		width: 25.9rem
-		height: 4.7rem
-		display: block
-		margin: 6rem auto 2rem auto
-		position: relative
-		border-radius: 0.5rem
-		padding-left: 2rem
-		-webkit-appearance: none;
-		background-image: url('../img/arrow_down.png')
-		background-position: right center
-		background-repeat: no-repeat
-		line-height: 4.7rem
-		-moz-appearance: none
-		text-indent: 0.01px
-		text-overflow: ''
-		-ms-appearance: none
-		appearance: none!important
-	input
-		width: 25.9rem
-		height: 4.7rem
-		line-height: 4.7rem
-		margin-bottom: 4rem
-	a
-		color: #f05a29
-		text-align: center
-		border-bottom: 1px dashed #f05a29
-		font-size: 1.5rem
-.modal-choose-region-item-1
-	position: absolute
-	right: 2rem
-	bottom: 7rem
-.modal-choose-region-item-2
-	position: absolute
-	right: 7rem
-	top: 10rem
-	img
-		width: 2rem
-		height: 2rem
-		transform: rotate(15deg)
-.modal-choose-region-item-3
-	position: absolute
-	left: 2rem
-	top: 4.4rem
-	img
-		width: 2rem
-		height: 2rem
-		transform: rotate(-15deg)
-.modal-open-cloud
-	position: absolute
-	top: 2rem
-	left: 4rem
-	opacity: 0.3
-	z-index: -1
-	img
-		width: 24.8rem
-		height: 9.8rem
-.modal-open-tric
-	position: absolute
-	bottom: 6rem
-	right: 2rem
-	z-index: 0
-	img
-		width: 3.1rem
-		height: 2.2rem
 #modal-discount
+	.modal-dialog
+		width: 60.3rem
+		overflow: hidden
 	.modal-discount-first-step
 		position: relative
 		display: block
 		height: 100%
-	p
-		text-align: center
-		font-size: 1.6rem
-		margin-bottom: 1rem
-		span
-			color: #f05a29
-	.modal-dialog
-		width: 60.3rem
-		overflow: hidden
-	.modal-text
-		width: 32rem
-	input
-		width: 19rem
-		height: 4.1rem
-		border-radius: 0.5rem
-		border: 1px solid #959595
-		line-height: 4.1rem
-		display: block
-		margin-top: 1.1rem
-		padding-left: 2rem
-		&[type="checkbox"]
-			width: auto
-			height: auto
-			display: inline-block
-		&[type="submit"]
-			border: 0
-	.modal-phone-personal-div
-		margin-left: 0
-	#form-open
-		margin-left: 31rem
-	.modal-discount-thanks
-		width: 25.8rem
-		text-align: left
-		margin-left: 0
-		margin-bottom: 4.5rem
-		font-size: 1.4rem
-		a
-			color: #f05a29
-	.modal-discount-img
-		position: absolute
-		left: -2rem
-		bottom: 2rem
-		width: 28.1rem
-	.modal-button-submit
-		margin: 2rem 0 0 0
-	label
-		width: 25rem
-	.modal-open-tric
-		bottom: 12rem
+		.modal-error
+			width: 90%
+			margin-left: 0
+		p
+			text-align: center
+			font-size: 1.6rem
+			margin-bottom: 1rem
+			span
+				color: #f05a29
+		.modal-text
+			width: 32rem
+			margin-top: 0
+		input
+			width: 19rem
+			margin-left: 0
+			&[type="checkbox"]
+				width: auto
+		.modal-personal-div
+			margin-left: 0
+		form
+			margin-left: 24rem
+		.modal-discount-thanks
+			width: 25.8rem
+			text-align: left
+			margin: 3rem auto 4.5rem 0
+			font-size: 1.4rem
+			a
+				color: #f05a29
+		label
+			width: 25rem
+		.modal-discount-img
+			position: absolute
+			left: -7rem
+			bottom: -2rem
+			width: 28.1rem
+		.modal-open-tric
+			bottom: 12rem
 	.modal-discount-second-step
 		text-align: center
 		display: none
@@ -515,6 +427,136 @@
 			width: 48.6rem
 		.modal-open-tric
 			bottom: 15rem
+@media (max-width: 767px)
+	.modal
+		.modal-dialog
+			width: calc(100% - 2rem)!important
+		.modal-content
+			padding: 5rem 1rem 2rem 1rem
+		h4
+			width: auto
+			margin-left: auto
+			font-size: 2rem
+		.modal-text
+			width: 100%!important
+			margin: 2rem auto
+		p
+			width: 90%
+			margin: 1rem auto
+		.modal-discount-thanks
+			text-align: center
+			margin: 2rem auto 4rem auto
+	#region
+		.region-countries
+			a
+				width: 15rem
+	#modal-card
+		.modal-personal-div
+			margin-bottom: 2rem
+		.modal-card-chosen
+			margin-top: 2rem
+			text-align: center
+		.modal-card-inputs
+			height: auto
+			width: 25.9rem
+			margin: 0 auto
+			p
+				margin-bottom: 0
+				margin: 0
+		.modal-card-input_3
+			width: 100%
+			margin-top: 1rem
+			span
+				font-weight: 300
+				font-size: 1.4rem
+		.modal-card-input_4
+			width: 100%
+			color: #333
+			input
+				vertical-align: middle
+			img
+				vertical-align: middle
+			&:nth-of-type(1) img
+				height: 3.2rem
+			&:nth-of-type(2) img
+				height: 2.9rem
+			&:nth-of-type(3) img
+				height: 4rem
+			&:nth-of-type(4) img
+				height: 3.9rem
+		.modal-card-footer
+			height: auto
+		.modal-card-personal-div
+			text-align: center
+			display: block
+		.modal-card-footer-inputs
+			input
+				width: 25.9rem
+				margin: 2rem auto
+				display: block
+				&[type="submit"]
+					width: 25.9rem
+					margin: 2rem auto
+		.modal-card-footer-sum
+			display: block
+			text-align: center
+			margin-left: 0
+	#modal-open
+		.modal-content
+			padding-left: 1rem
+			padding-right: 1rem
+			z-index: -1
+		.modal-open-tric
+			bottom: 2rem
+	#modal-choose-region
+		.modal-dialog
+			width: calc(100% - 2rem)
+		.modal-content
+			padding-left: 1rem
+			padding-right: 1rem
+		.modal-choose-region-item-1
+			bottom: 3rem
+		.modal-choose-region-item-2
+			top: 12rem
+		.modal-choose-region-item-3
+			top: 1rem
+	#modal-identify
+		text-align: center
+		.modal-link_button
+			display: inline-block
+			&:nth-of-type(1)
+				margin-left: 0
+				margin-right: 2rem
+	#modal-discount
+		.modal-discount-first-step
+			.personal-error
+				width: 25.9rem
+				margin: 1rem auto
+			p
+				width: 100%
+			form
+				margin-left: 0
+			input
+				margin-left: auto
+				width: 25.9rem
+			.modal-personal-div
+				margin: 0 auto
+				width: 25.9rem
+			.modal-discount-thanks
+				margin-left: auto
+				width: 25.9rem
+				text-align: center
+				margin-bottom: 4rem
+		.modal-discount-second-step
+			.modal-discount-second-image
+				width: 90%
+
+@media (max-width: 360px)
+	#region
+		.region-countries
+			a
+				width: 100%
+				text-align: center
 @media (max-width: 479px)
 	#region
 		.modal-dialog
@@ -546,177 +588,3 @@
 				font-size: 1.8rem
 				color: #f05a29
 				text-align: left
-@media (max-width: 767px)
-	#modal-discount
-		.modal-dialog
-			width: calc(100% - 2rem)
-		h4
-			width: auto
-			margin-left: auto
-			font-size: 2rem
-			margin-top: 5rem
-		#form-open
-			margin-left: 0
-			text-align: center
-		.modal-text
-			width: 90%
-			margin: 1rem auto
-		p
-			width: 90%
-			margin: 1rem auto
-		input
-			display: inline-block
-		.modal-discount-thanks
-			text-align: center
-		.modal-phone-personal-div
-			width: 19rem
-			margin: 0 auto
-		.modal-discount-thanks
-			margin: 2rem auto 4rem auto
-	#modal-phone 
-		.modal-dialog
-			width: auto
-		.modal-content
-			padding: 4rem 1rem 2rem 1rem 
-		h4
-			width: 100%
-			margin: 0 0 2rem 0
-			line-height: 2.6rem
-		.modal-text
-			width: 100%
-			margin: 0
-		.modal-phone-personal-div
-			width: 100%
-			margin: 0
-			text-align: center
-	#region
-		.region-countries
-			a
-				width: 15rem
-	#modal-card
-		.modal-dialog
-			width: calc(100% - 2rem)
-		.modal-content
-			padding: 3rem 2rem 8rem 2rem
-		.modal-card-chosen
-			margin-top: 2rem
-		.modal-card-input_3
-			font-size: 1.6rem
-			display: inline-block
-			width: 100%
-			margin-top: 1rem
-			span
-				font-weight: 300
-				font-size: 1.4rem
-		.modal-card-input_4
-			font-size: 1.6rem
-			display: inline-block
-			width: 100%
-			color: #333
-			height: 5rem
-			line-height: 5rem
-			input
-				vertical-align: middle
-			img
-				vertical-align: middle
-			&:nth-of-type(1) img
-				height: 3.2rem
-			&:nth-of-type(2) img
-				height: 2.9rem
-			&:nth-of-type(3) img
-				height: 4rem
-			&:nth-of-type(4) img
-				height: 3.9rem
-		.modal-card-inputs
-			height: auto
-			padding: 0
-			padding-top: 1rem
-			p
-				margin-bottom: 0
-		.modal-card-footer
-			height: auto
-		.modal-card-personal-div
-			width: 21.7rem
-			text-align: center
-			position: absolute
-			bottom: 2rem
-			left: 50%
-			transform: translateX(-50%)
-			display: block
-		.modal-card-footer-inputs
-			input
-				width: 21.7rem
-				margin: 2rem auto
-				display: block
-				&[type="submit"]
-					margin: 2rem auto
-		.modal-card-footer-sum
-			display: block
-			text-align: center
-			margin-left: 0
-	#modal-open
-		.modal-dialog
-			width: 100%
-		.modal-content
-			padding-left: 1rem
-			padding-right: 1rem
-			z-index: -1
-		.modal-text
-			width: 100%
-		.modal-phone-personal-div
-			width: 100%
-			margin-left: 1rem
-		.modal-open-tric
-			bottom: 2rem
-		h4
-			margin-top: 5rem
-	#modal-choose-region
-		.modal-dialog
-			width: calc(100% - 2rem)
-		.modal-content
-			padding-left: 1rem
-			padding-right: 1rem
-		.modal-choose-region-item-1
-			bottom: 3rem
-		.modal-choose-region-item-2
-			top: 12rem
-		.modal-choose-region-item-3
-			top: 1rem
-	#modal-identify
-		.modal-dialog
-			width: calc(100% - 2rem)
-		.modal-content
-			padding-left: 1rem
-			padding-right: 1rem
-			text-align: center
-		a
-			&:nth-of-type(1)
-				margin-left: 0
-				margin-right: 2rem
-			display: inline-block
-	#modal-discount
-		.modal-discount-second-step
-			.modal-discount-second-image
-				width: 90%
-	.personal-error
-		&#personal-discount-error
-			width: 90%
-			margin: 1rem auto
-	#modal-subscribe
-		.modal-dialog
-			width: 100%
-		h4
-			width: 100%
-			margin: 4rem auto 2rem auto
-		.modal-text:nth-of-type(1)
-			width: calc(100% - 2rem)
-			margin: 0 auto
-		.modal-text:nth-of-type(2)
-			width: calc(100% - 2rem)
-			margin: 0 auto 2rem auto
-@media (max-width: 360px)
-	#region
-		.region-countries
-			a
-				width: 100%
-				text-align: center

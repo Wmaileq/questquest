@@ -174,14 +174,6 @@ $(document).ready(function(){
   }
     });
 });
-/* Маска ввода номера */
-$(document).ready(function(){
-$("#phone-modal").intlTelInput({
-    utilsScript: "js/utils.js",
-    onlyCountries: ["ru","es","by","kz","sk"],
-    preferredCountries: ["ru"]
-});
-});
 /* Плавный скролл */
 $(document).ready(function(){
   $(".slicy").on("click","a", function (event) {
