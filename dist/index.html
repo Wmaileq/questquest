@@ -2803,15 +2803,18 @@
           <div class="modal-content">
             <div class="modal-discount-first-step">
 	            <h4>Постойте! Для вас скидка!</h4>
-	            <p>Оставьте Ваш телефон сейчас и получите <span>скидку 100 руб.!</span></p>
-	            <div class="modal-text">Мы редко предлагаем подобные вещи, это крупная удача.</div>
+	           
+	            <div class="modal-text">
+                Оставьте Ваш телефон сейчас и получите <span>скидку 100 руб.!</span><br>
+                Мы редко предлагаем подобные вещи,<br> это крупная удача.
+              </div>
 	            <form id="form-open">
 		            <input placeholder="Телефон" name="phone" type="tel" id="modal-discount-phone">
 		            <input id="modal-discount-button" type="submit" value="Подать заявку">
 		            <div id="personal-discount-error" class="personal-error" style="display:none">Вы должны согласиться на обработку персональных данных</div>
 		            <div class="modal-personal-div">
 		            	<input id="modal-discount-personal" checked type="checkbox" onchange="document.getElementById('modal-discount-button').disabled = !this.checked;document.getElementById('personal-discount-error').style.display = document.getElementById('personal-discount-error').style.display == 'none' ? 'block' : 'none';"> 
-		            <label for="modal-discount-personal">Согласие на <a href="#">обработку</a><br class="mobile_hide"> персональных данных</label></div>
+		            <label for="modal-discount-personal">Согласие на <a href="#">обработку</a> персональных данных</label></div>
 		            <p class="modal-discount-thanks"><a href="#">Спасибо, но я не хочу получить скидку на квест.</a></p>
 	            </form>
 	            <img class="modal-discount-img mobile_hide" src="img/cat_s/entertaiments.svg" alt="Хухра">
