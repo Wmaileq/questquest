@@ -6,12 +6,12 @@ $(document).ready(function(){
   $('.mobile-quest-slider').each(function(){
     var q = $(this).children().length;
     if ( q != 0 ) {
-      $(this).parent().width(q * 26.2 + 'rem');
+      $(this).parent().width(q * 25.2 + 'rem');
     } else {
       $(this).parent().parent().parent().hide();
     }
   });
-  $('.mobile-quest-viewport').scrollLeft(230);
+  $('.mobile-quest-viewport').scrollLeft(220);
   $('.mobile-banner-view').scrollLeft(70);
   // стрелочка подробнее
   $('.more').click(function(e){
