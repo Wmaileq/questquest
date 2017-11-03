@@ -2,17 +2,17 @@
 $(document).ready(function(){
 
   var catcarousel = $('#cats-carousel');
-  catcarousel.owlCarousel({
-        loop: true,
-        items: 4,
-        nav: false
+  catcarousel.slick({
+        infinite: true,
+        slidesToShow: 4,
+        touchMove: false
       });
   
 	$('.cat_s-right_b').click(function(){
-    catcarousel.trigger('next.owl.carousel');
+    catcarousel.slick('slickNext');
 	});
 	$('.cat_s-left_b').click(function(){
-    catcarousel.trigger('prev.owl.carousel');
+    catcarousel.slick('slickPrev');
 	});
 });
 /* Запуск видео при клике на плей в whatis */

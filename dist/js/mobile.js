@@ -1,11 +1,10 @@
 $(document).ready(function(){
-  // Ширина, скрытие и начальный скролл
+  // Слайдер
   $('.quest-carousel').each(function(){
-        $(this).owlCarousel({
-          loop: true,
-          nav: false,
-          dots: false,
-          autoWidth: true
+        $(this).slick({
+          infinite: true,
+          mobileFirst: true,
+          variableWidth: true
         });
       });
   // стрелочка подробнее
