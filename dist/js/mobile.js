@@ -4,7 +4,8 @@ $(document).ready(function(){
         $(this).slick({
           infinite: true,
           mobileFirst: true,
-          variableWidth: true
+          variableWidth: true,
+          arrows: false
         });
       });
   // стрелочка подробнее

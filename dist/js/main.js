@@ -5,7 +5,8 @@ $(document).ready(function(){
   catcarousel.slick({
         infinite: true,
         slidesToShow: 4,
-        touchMove: false
+        touchMove: false,
+        arrows: false
       });
   
 	$('.cat_s-right_b').click(function(){
