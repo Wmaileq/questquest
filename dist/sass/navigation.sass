@@ -127,53 +127,41 @@
 .cat_s
 	width: 100%
 	position: relative
-	&-viewport
-		position: relative
-		width: 67rem
-		height: 19rem
-		overflow: hidden
-		margin: 0 auto
-	&-cat
-		position: absolute
-		top: 0
-		left: -2rem
-		width: 120rem
-		height: 19rem
-		transition: all 0.2s
-		ul
-			height: 16.8rem
-			padding-top: 4.1rem
-			margin-left: 0
-			font-size: 0
-			li
-				width: 17.4rem
-				text-align: center
-				border-right: 1px solid #ebebeb
-				display: inline-block
-				height: 11.6rem
-				vertical-align: top
-				&.cat_s-active
-					a
-						color: #f05a29
-						border-bottom: 2px solid #f05a29	
-				img
-					width: 7.5rem
-					height: 6rem
-					display: block
-					margin: 0 auto 3rem auto
-					transition: transform 0.1s
+	ul
+		height: 16.8rem
+		padding-top: 4.1rem
+		margin-left: 0
+		font-size: 0
+		li
+			width: 17.4rem
+			text-align: center
+			border-right: 1px solid #ebebeb
+			display: inline-block
+			height: 11.8rem
+			vertical-align: top
+			padding: 0.5rem 0
+			&.cat_s-active
 				a
-					font-size: 1.8rem
-					text-decoration: none
-					color: #333
-					p
-						height: 5.5rem
-					&:hover
-						color: #f05a29
-						img
-							transform: scale(1.07)
-					&:active
-						border-bottom: 2px solid #f05a29	
+					color: #f05a29
+					border-bottom: 2px solid #f05a29	
+			img
+				width: 7.5rem
+				height: 6rem
+				display: block
+				margin: 0 auto 3rem auto
+				transition: transform 0.1s
+			a
+				font-size: 1.8rem
+				text-decoration: none
+				color: #333
+				p
+					height: 5.5rem
+				&:hover
+					color: #f05a29
+					img
+						transform: scale(1.07)
+				&:active
+					border-bottom: 2px solid #f05a29	
 	&-left_b
 		position: absolute
 		height: 100%
@@ -187,6 +175,8 @@
 		vertical-align: top
 		transition: all 0.1s
 		line-height: 19rem
+		z-index: 200
+		background-color: #f7f7f7
 		&-arrow
 			background: url(../img/cat_s/arrow.svg) center center no-repeat
 			width: 100%
@@ -212,6 +202,8 @@
 		outline: 0
 		cursor: pointer
 		line-height: 19rem
+		z-index: 200
+		background-color: #f7f7f7
 		&-arrow
 			background: url(../img/cat_s/arrow.svg) center center no-repeat
 			width: 100%

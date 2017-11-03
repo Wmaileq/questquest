@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/bootstrap1366.min.css">
     <link rel="stylesheet" href="css/bootstrap.modal.min.css">
     <link rel="stylesheet" href="css/bootstrap.animations.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
   </head>
@@ -27,7 +29,7 @@
         <div class="row">
           <div class="col-xs-2 mobile_show">
             <a href="#menu_mobile" data-toggle="collapse">
-              <img src="img/mobile/burger.png" alt="Меню">
+              <img class="burger-button" src="img/mobile/burger.svg" alt="Меню">
             </a>
           </div>
           <div class="col-xs-10 col-sm-4">
@@ -258,56 +260,52 @@
         <div class="row">
           <div class="col-sm-7">
             <div class="cat_s">
-              <div class="cat_s-viewport">
-                <div class="cat_s-cat">
-                  <ul>
-                    <li class="cat_s-active">
-                      <a href="#">
-                          <img src="img/cat_s/all.svg" alt="Все">
-                        <p>Все</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                          <img src="img/cat_s/children.svg" alt="Детям">
-                      <p>Детям</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                          <img src="img/cat_s/horror.svg" alt="Страшные">
-                        <p>Детский день рождения</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                          <img src="img/cat_s/corporate.svg" alt="Корпоратив">
-                        <p>Корпоратив</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                          <img src="img/cat_s/action.svg" alt="Экшн">
-                        <p>Экшн</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                          <img src="img/cat_s/action.svg" alt="Экшн">
-                        <p>Экшн</p>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="cat_s-left_b">
-                <div class="cat_s-left_b-arrow"></div>
-              </div>
-              <div class="cat_s-right_b">
-                <div class="cat_s-right_b-arrow"></div>
-              </div>
+              <ul id="cats-carousel" class="owl-carousel">
+                <li class="cat_s-active">
+                  <a href="#">
+                      <img src="img/cat_s/all.svg" alt="Все">
+                    <p>Все</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/cat_s/children.svg" alt="Детям">
+                  <p>Детям</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/cat_s/horror.svg" alt="Страшные">
+                    <p>Детский день рождения</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/cat_s/corporate.svg" alt="Корпоратив">
+                    <p>Корпоратив</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/cat_s/action.svg" alt="Экшн">
+                    <p>Экшн</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/cat_s/action.svg" alt="Экшн">
+                    <p>Экшн</p>
+                  </a>
+                </li>
+              </ul>
             </div>
-          </div>
+            <div class="cat_s-left_b">
+              <div class="cat_s-left_b-arrow"></div>
+            </div>
+            <div class="cat_s-right_b">
+              <div class="cat_s-right_b-arrow"></div>
+            </div>            
+        </div>
           <div class="col-sm-5">
             <form id="form-subscribe">
             <div class="navigation-offer">
@@ -351,7 +349,7 @@
               </div>
               <a href="{quest}" class="quest-footer"></a>
               <h5><a href="{quest}">Многоликий Билли Пираты карибских морей</a></h5>
-              <div class="quest-place"><span class="quest-place_green">ул. Гафури дом 27 вход там и тут и еще тут и там</span></div>
+              <div class="quest-place"><span class="quest-place_green">ул. Гафури дом 27</span></div>
               <a href="#" class="quest-review">15 отзывов</a>
               <div class="quest-chars">
                 <span class="quest-amount">4-6 игроков</span>
@@ -396,8 +394,8 @@
           <div class="col-sm-4">
             <div class="quest-item">
               <div class="quest-img"><a href="{quest}"><img src="img/quest/3.jpg" alt="Многоликий Билли"></a></div>
-              <a class="quest-cat" href="{category}">Детям</a>
               <span class="quest-top">
+              <a class="quest-cat" href="{category}">Детям</a>
               <picture>
                 <source type="image/svg+xml" srcset="img/quest/top.svg">
                 <img src="img/quest/top.png" alt="ТОП-Квест">
@@ -657,130 +655,128 @@
         Квест-экскурсии
         </a>
       </div>
-      <div class="mobile-quest-viewport scrollbar-inner">
-        <div class="mobile-quest-wrapper">
-          <ul class="mobile-quest-slider">
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста В 2 строки</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-                <div class="quest-limit">18+</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-                <div class="quest-limit">18+</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-                <div class="quest-limit">18+</div>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="mobile-quest-viewport">
+        <ul class="mobile-quest-slider quest-carousel owl-carousel">
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста В 2 строки</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="mobile-quest-header">
         <a href="#">
@@ -788,159 +784,130 @@
           Экшн
         </a>
       </div>
-      <div class="mobile-quest-viewport scrollbar-inner">
-        <div class="mobile-quest-wrapper">
-          <ul class="mobile-quest-slider">
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="mobile-quest-viewport">
+        <ul class="mobile-quest-slider quest-carousel owl-carousel">
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста В 2 строки</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="mobile-banner-view scrollbar-inner">
-        <div class="mobile-banner-slider">
+        <div class="mobile-banner-slider quest-carousel owl-carousel">
           <div class="mobile-banner mobile-banner_callback">
             <a href="#" data-toggle="modal" data-target="#modal-phone">Закажите обратный звонок и мы перезвоним вам</a>
           </div>
@@ -948,7 +915,6 @@
             <a href="#">Играйте в QuestQuest прямо с телефона!</a>
           </div>
         </div>
-      </div>
       <div class="mobile-quest-header">
         <a href="#">
         <picture>
@@ -958,127 +924,128 @@
         Корпоратив
         </a>
       </div>
-      <div class="mobile-quest-viewport scrollbar-inner">
-        <div class="mobile-quest-wrapper">
-          <ul class="mobile-quest-slider">
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="mobile-quest-viewport">
+        <ul class="mobile-quest-slider quest-carousel owl-carousel">
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста В 2 строки</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="mobile-quest-timetable">
         <picture>
@@ -1099,127 +1066,128 @@
         С актерами
         </a>
       </div>
-      <div class="mobile-quest-viewport scrollbar-inner">
-        <div class="mobile-quest-wrapper">
-          <ul class="mobile-quest-slider">
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="mobile-quest-viewport">
+        <ul class="mobile-quest-slider quest-carousel owl-carousel">
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста В 2 строки</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="mobile-banner mobile-banner_discount">
         <a href="#">Ловите скидки в нашей группе в ВК</a>
@@ -1731,130 +1699,131 @@
 	            </div>
 	          </div>
 	        </div>
-	        <div class="mobile-quest-viewport scrollbar-inner mobile_show">
-		        <div class="mobile-quest-wrapper">
-		          <ul class="mobile-quest-slider">
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mobile-quest-banner">
-                <div class="mobile-quest-overlay"></div>
-                <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
-                <div class="mobile-quest-top">ТОП-Квест</div>
-                <div class="mobile-quest-price">От 1000 р\чел</div>  
-              </a>
-              <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
-              <a class="mobile-quest-footer" href="#">
-                <h6>Название квеста</h6>
-                <div class="quest-amount">
-                  <img src="img/quest/amount.svg" alt="20-100 игроков">
-                  4-6 игроков
-                </div>
-                <div class="quest-blood">
-                  <img src="img/quest/blood.svg" alt="">
-                  Кровь
-                </div>
-                <div class="quest-actor">
-                  <img src="img/quest/actor.svg" alt="">
-                  Актёр
-                </div>
-                <div class="quest-time">
-                  <img src="img/quest/time.svg" alt="">
-                  60 минут
-                </div>
-                <div class="quest-more">Подробнее</div>
-              </a>
-            </li>
-          </ul>
-		        </div>
+      </div>
+	        <div class="mobile-quest-viewport mobile_show">
+        <ul class="mobile-quest-slider quest-carousel owl-carousel">
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста В 2 строки</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mobile-quest-banner">
+              <div class="mobile-quest-overlay"></div>
+              <img class="mobile-quest-image" src="img/mobile/slider1.png" alt="Квест">
+              <div class="mobile-quest-top">ТОП-Квест</div>
+              <div class="mobile-quest-price">От 1000 р\чел</div>  
+            </a>
+            <div data-video-src="#" class="mobile-quest-video-bg"><span class="mobile-quest-video"></span></div>
+            <a class="mobile-quest-footer" href="#">
+              <h6>Название квеста</h6>
+              <div class="quest-amount">
+                <img src="img/quest/amount.svg" alt="20-100 игроков">
+                4-6 игроков
+              </div>
+              <div class="quest-blood">
+                <img src="img/quest/blood.svg" alt="">
+                Кровь
+              </div>
+              <div class="quest-actor">
+                <img src="img/quest/actor.svg" alt="">
+                Актёр
+              </div>
+              <div class="quest-time">
+                <img src="img/quest/time.svg" alt="">
+                60 минут
+              </div>
+              <div class="quest-more">Подробнее</div>
+              <div class="quest-limit">18+</div>
+            </a>
+          </li>
+        </ul>
       </div>
 	        <a class="quest-watch_all mobile_hide" href="#"><span>Смотреть все развлечения</span></a>
-	    </div>
     </div>
 
     <section class="city-prev mobile_hide">
@@ -2540,7 +2509,7 @@
     <script src="js/bootstrap.transitions.min.js"></script>
     <script src="js/bootstrap.collapse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script><!-- Валидация форм -->
-    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script><!-- Скрипты для основной версии -->
     <script src="js/mobile.js"></script><!-- Для мобильной -->
 
@@ -2843,7 +2812,7 @@
       <div class="collapse mobile_show" id="menu_mobile">
         <div class="burger_menu">
           <a href="#menu_mobile" data-toggle="collapse">
-            <img src="img/mobile/close.svg" alt="">
+            <img src="img/mobile/burger_white.svg" alt="">
           </a>
           <ul>
             <li><a href="#" data-toggle="modal" data-target="#region">Город</a></li>

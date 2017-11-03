@@ -1,18 +1,13 @@
 $(document).ready(function(){
-  // стилизация скролл-баров
-  $('.scrollbar-inner').scrollbar();
-
   // Ширина, скрытие и начальный скролл
-  $('.mobile-quest-slider').each(function(){
-    var q = $(this).children().length;
-    if ( q != 0 ) {
-      $(this).parent().width(q * 29.2 + 'rem');
-    } else {
-      $(this).parent().parent().parent().hide();
-    }
-  });
-  $('.mobile-quest-viewport').scrollLeft(275);
-  $('.mobile-banner-view').scrollLeft(70);
+  $('.quest-carousel').each(function(){
+        $(this).owlCarousel({
+          loop: true,
+          nav: false,
+          dots: false,
+          autoWidth: true
+        });
+      });
   // стрелочка подробнее
   $('.more').click(function(e){
     e.preventDefault();
