@@ -1,19 +1,18 @@
 /* Слайдер категорий */
 $(document).ready(function(){
 
-  var catcarousel = $('#cats-carousel');
-  catcarousel.slick({
-        infinite: true,
-        slidesToShow: 4,
-        touchMove: false,
-        arrows: false
+   // Слайдер
+        var navSwiper = new Swiper ('.cats-slider', {
+        speed: 150,
+        loop: true,
+        slidesPerView: 4
       });
   
 	$('.cat_s-right_b').click(function(){
-    catcarousel.slick('slickNext');
+    navSwiper.slideNext(150);
 	});
 	$('.cat_s-left_b').click(function(){
-    catcarousel.slick('slickPrev');
+    navSwiper.slidePrev(150);
 	});
 });
 /* Запуск видео при клике на плей в whatis */

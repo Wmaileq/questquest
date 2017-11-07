@@ -1,12 +1,13 @@
 $(document).ready(function(){
   // Слайдер
-  $('.quest-carousel').each(function(){
-        $(this).slick({
-          infinite: true,
-          mobileFirst: true,
-          variableWidth: true,
-          arrows: false
-        });
+        var questSwiper = new Swiper ('.mobile-quest-slider', {
+        speed: 150,
+        width: 280,
+        loop: true
+      });
+        var bannerSwiper = new Swiper ('.mobile-banner-slider', {
+        speed: 150,
+        width: 314
       });
   // стрелочка подробнее
   $('.more').click(function(e){
