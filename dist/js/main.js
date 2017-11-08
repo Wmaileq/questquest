@@ -2,11 +2,23 @@
 $(document).ready(function(){
 
    // Слайдер
+   var numTags = $('#cats-carousel').children().length;
+   console.log(numTags);
+   if ( numTags > 4) {
         var navSwiper = new Swiper ('.cats-slider', {
         speed: 150,
         loop: true,
         slidesPerView: 4
       });
+      } else {
+        var navSwiper = new Swiper ('.cats-slider', {
+        speed: 150,
+        slidesPerView: 4,
+
+      })
+        $('.cat_s-right_b').hide();
+        $('.cat_s-left_b').hide();
+    }
   
 	$('.cat_s-right_b').click(function(){
     navSwiper.slideNext(150);
