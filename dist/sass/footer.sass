@@ -56,8 +56,8 @@ footer
 	footer
 		height: auto
 	.footer
-		padding: 0 1.5rem
-		padding-top: 5rem
+		padding: 3.4rem 1.5rem 5.2rem 1.5rem
+		background-color: #242424
 		&-left
 			width: 100%
 			margin-top: 1rem
@@ -67,35 +67,62 @@ footer
 			padding-left: 0
 			ul
 				padding-left: 0
-				width: 29rem
 				margin: 0 auto
+				display: block
+				text-align: left
+				line-height: 3.4rem
+				padding-left: 2.4rem
 		&-menu
 			text-align: center
 			margin-top: 4rem
 			ul
 				text-align: center
+				border-bottom: 1px solid #343434
 				li
 					display: block
-					height: 5rem
+					height: 5.6rem
 					margin-top: 0
+					border-top: 1px solid #343434
+					line-height: 5.6rem
+					text-align: left
+					padding-left: 2.5rem
+					position: relative
+					&:after
+						content: ''
+						position: absolute
+						right: 2.4rem
+						top: 2.4rem
+						width: 0.9rem
+						height: 1.5rem
+						background: url(../img/footer/arrow_footer.svg) center center no-repeat
+						background-size: cover
 				a
-					font-size: 2rem
+					font-size: 1.6rem
 					font-weight: 400
 					color: #333
 					border-bottom: 0
+					color: #fff
+					font-weight: 300
 		&-ul-right
 			text-align: center
+			padding-left: 0
+			padding-right: 0
 			span
 				display: block
 				margin-top: 3rem
 				margin-bottom: 3rem
+				color: #fff
+				padding-left: 2.5rem
+				padding-right: 2.5rem
+				font-size: 1.4rem
+				font-weight: 300
 		&-call
 			position: fixed
 			bottom: 0
 			left: 0
 			width: 100%
 			height: 5.1rem
-			background-color: rgba(0,0,0,0.75)
+			background-color: rgba(11,11,11,0.7)
 			padding-top: 1rem
 			z-index: 500
 			img
@@ -109,12 +136,10 @@ footer
 			&-text
 				display: inline-block
 				color: #FFF
-				font-weight: 700
 				font-size: 2rem
 				vertical-align: middle
 	.social-links img, .social-links ul li
-		width: 4.5rem!important
-		height: 4.5rem!important
+		width: 3.7rem!important
+		height: 3.7rem!important
 	.social-links
 		width: 100%
-	

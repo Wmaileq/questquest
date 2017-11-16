@@ -307,7 +307,6 @@ input::-webkit-inner-spin-button
 		font-size: 10px
 	body
 		padding-top: 5.6rem
-		padding-bottom: 5.1rem
 	.mobile_hide
 		display: none!important
 	header
@@ -326,6 +325,7 @@ input::-webkit-inner-spin-button
 			background-size: cover
 			position: absolute
 			right: 1.5rem
+			margin-top: 2rem
 		&-main-button
 			display: block
 			width: 22rem
@@ -392,7 +392,7 @@ input::-webkit-inner-spin-button
 			font-weight: 700
 			font-size: 1.8rem
 	.main-logo
-		text-align: right
+		text-align: center
 		height: 7.4rem
 		padding-right: 1.5rem
 	.main
@@ -408,12 +408,11 @@ input::-webkit-inner-spin-button
 			margin-top: 0
 		h3
 			width: 100%
-			padding-left: 34%
-			text-align: left
+			text-align: center
 			font-size: 2.5rem
 			font-weight: 700
 			line-height: 2.8rem
-			margin: 0
+			margin: -2rem 0 0 0
 			margin-top: 0
 			&:first-line
 				line-height: inherit
@@ -427,22 +426,34 @@ input::-webkit-inner-spin-button
 		transition: 0.2s linear
 		z-index: 1000
 		height: 100%
-		img
-			width: 3rem
-			height: 3rem
-			margin-top: 1.6rem
-			margin-left: 1.6rem
-		a
-			color: #fc654c
-			text-decoration: none
 	.burger_menu
 		height: 100vh
-		background-color: #1d1313
+		background-color: #242424
+		.burger-header
+			height: 6rem
+			line-height: 6rem
+			padding-left: 1.9rem
+			a
+				font-size: 1.8rem
+				font-weight: 700
+				color: #fff
+		.burger-close
+			position: absolute
+			right: 1.4rem
+			top: 1.9rem
+			width: 1.9rem
+			height: 1.9rem
 		a
+			text-decoration: none
 			margin-top: 3rem
 		ul
 			width: 100%
-			height: 100%
+			border-top: 1px solid #343434
+			&:nth-of-type(2)
+				width: calc(100% - 2.4rem)
+				margin-left: 1.2rem
+				li
+					margin-left: 0
 			li
 				display: block
 				height: 5rem
@@ -450,7 +461,16 @@ input::-webkit-inner-spin-button
 				color: #FFF
 				font-family: 'Roboto Slab'
 				font-size: 2.4rem
-				text-align: center
+				font-weight: 300
+				font-size: 1.6rem
+				padding-left: 1.3rem
+				margin-left: 1.2rem
+				margin-right: 1.2rem
+				a
+					color: #fff
+				img
+					width: 1.5rem
+					margin-right: 1.5rem
 	.burger-button
 		width: 3rem
 	.mobile
@@ -540,7 +560,7 @@ input::-webkit-inner-spin-button
 		position: relative
 		width: 100%
 		height: 15.5rem
-		margin-top: 24.5rem
+		margin-top: 26.5rem
 		background: url(../img/main/way-bg.svg) center center no-repeat
 		background-size: 140% 100%
 		text-align: center
@@ -575,11 +595,11 @@ input::-webkit-inner-spin-button
 			span
 				color: #f76811
 	.logo-text
-		position: absolute
-		top: 8rem
-		right: 2rem
 		font-size: 1.4rem
-		display: block
+		display: inline-block
 		color: #FFF
 		width: 10rem
+		height: 5.3rem
+		padding-top: 0.6rem
 		line-height: 2rem
+		margin-top: 1.8rem
